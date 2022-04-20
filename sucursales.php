@@ -33,7 +33,7 @@
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Menu</a></li>
-                                    <li class="breadcrumb-item active">Sucursales</li>
+                                    <li class="breadcrumb-item active"><?= $lang["t-NameBranch"] ?></li>
                                 </ol>
                             </div>
 
@@ -67,7 +67,7 @@
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
                                                 <div class="search-box ms-2">
-                                                    <input type="text" class="form-control search" placeholder="Search...">
+                                                    <input type="text" class="form-control search" placeholder="<?= $lang["t-search"] ?>">
                                                     <i class="ri-search-line search-icon"></i>
                                                 </div>
                                             </div>
@@ -83,11 +83,14 @@
                                                             <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
                                                         </div>
                                                     </th>
-                                                    <th class="sort" data-sort="customer_name">Customer</th>
-                                                    <th class="sort" data-sort="email">Email</th>
-                                                    <th class="sort" data-sort="phone">Phone</th>
-                                                    <th class="sort" data-sort="date">Joining Date</th>
-                                                    <th class="sort" data-sort="status">Delivery Status</th>
+                                                    <th class="sort" data-sort="NameBranch"><?= $lang["t-NameBranch"]?></th>
+                                                    <th class="sort" data-sort="Direction"><?= $lang["t-Direction"] ?></th>
+                                                    <th class="sort" data-sort="phone"><?= $lang["t-Phone"] ?></th>
+                                                    <th class="sort" data-sort="CodeBranch"><?= $lang["t-CodeBranch"] ?></th>
+                                                    <th class="sort" data-sort="Email"><?= $lang["t-Email"] ?></th>
+                                                    <th class="sort" data-sort="Country"><?= $lang["t-Country"] ?></th>
+                                                    <th class="sort" data-sort="Image"><?= $lang["t-Image"] ?></th>
+                                                    <th class="sort" data-sort="Status"><?= $lang["t-Status"] ?></th>
                                                     <th class="sort" data-sort="action">Action</th>
                                                 </tr>
                                             </thead>
@@ -95,267 +98,17 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                                    <td class="customer_name">Mary Cousar</td>
-                                                    <td class="email">marycousar@velzon.com</td>
-                                                    <td class="phone">580-464-4694</td>
-                                                    <td class="date">06 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option2">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2102</a></td>
-                                                    <td class="customer_name">Jeff Taylor</td>
-                                                    <td class="email">jefftaylor@velzon.com</td>
-                                                    <td class="phone">863-577-5537</td>
-                                                    <td class="date">15 Feb, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option3">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2103</a></td>
-                                                    <td class="customer_name">Robert McMahon</td>
-                                                    <td class="email">robertmcmahon@velzon.com</td>
-                                                    <td class="phone">786-253-9927</td>
-                                                    <td class="date">12 Jan, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option4">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2104</a></td>
-                                                    <td class="customer_name">Michael Morris</td>
-                                                    <td class="email">michaelmorris@velzon.com</td>
-                                                    <td class="phone">805-447-8398</td>
-                                                    <td class="date">19 May, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="customer_name">Kevin Dawson</td>
-                                                    <td class="email">kevindawson@velzon.com</td>
-                                                    <td class="phone">213-741-4294</td>
-                                                    <td class="date">14 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option6">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2106</a></td>
-                                                    <td class="customer_name">Carolyn Jones</td>
-                                                    <td class="email">carolynjones@velzon.com</td>
-                                                    <td class="phone">414-453-5725</td>
-                                                    <td class="date">07 Jun, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option7">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2107</a></td>
-                                                    <td class="customer_name">Glen Matney</td>
-                                                    <td class="email">glenmatney@velzon.com</td>
-                                                    <td class="phone">515-395-1069</td>
-                                                    <td class="date">02 Nov, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option8">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2108</a></td>
-                                                    <td class="customer_name">Charles Kubik</td>
-                                                    <td class="email">charleskubik@velzon.com</td>
-                                                    <td class="phone">231-480-8536</td>
-                                                    <td class="date">25 Sep, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option9">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2109</a></td>
-                                                    <td class="customer_name">Herbert Stokes</td>
-                                                    <td class="email">herbertstokes@velzon.com</td>
-                                                    <td class="phone">312-944-1448</td>
-                                                    <td class="date">20 Jul, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option10">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2110</a></td>
-                                                    <td class="customer_name">Timothy Smith</td>
-                                                    <td class="email">timothysmith@velzon.com</td>
-                                                    <td class="phone">973-277-6950</td>
-                                                    <td class="date">13 Dec, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option11">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2111</a></td>
-                                                    <td class="customer_name">Johnny Evans</td>
-                                                    <td class="email">johnnyevans@velzon.com</td>
-                                                    <td class="phone">407-645-1767</td>
-                                                    <td class="date">01 Oct, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
                                                             <input class="form-check-input" type="checkbox" name="checkAll" value="option12">
                                                         </div>
                                                     </th>
                                                     <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2112</a></td>
-                                                    <td class="customer_name">Kevin Dawson</td>
-                                                    <td class="email">kevindawson@velzon.com</td>
+                                                    <td class="NameBranch">OXXO</td>
+                                                    <td class="Direction">Pasadena California 865 st</td>
                                                     <td class="phone">213-741-4294</td>
-                                                    <td class="date">14 Apr, 2021</td>
+                                                    <td class="CodeBranch">2210</td>
+                                                    <td class="Email">Oxxodawson@velzon.com</td>
+                                                    <td class="Country">Los Angeles</td>
+                                                    <td class="Image">Image.PNG</td>
                                                     <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
@@ -384,11 +137,11 @@
                                     <div class="d-flex justify-content-end">
                                         <div class="pagination-wrap hstack gap-2">
                                             <a class="page-item pagination-prev disabled" href="#">
-                                                Previous
+                                            <?= $lang["t-Previous"] ?>
                                             </a>
                                             <ul class="pagination listjs-pagination mb-0"></ul>
                                             <a class="page-item pagination-next" href="#">
-                                                Next
+                                            <?= $lang["t-Next"] ?>
                                             </a>
                                         </div>
                                     </div>
@@ -421,25 +174,37 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="customername-field" class="form-label">Customer Name</label>
-                                        <input type="text" id="customername-field" class="form-control" placeholder="Enter Name" required />
+                                        <label for="customername-field" class="form-label"><?= $lang["t-NameBranch"]?></label>
+                                        <input type="text" id="customername-field" class="form-control" placeholder="<?= $lang["t-NameBranch"]?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="email-field" class="form-label">Email</label>
-                                        <input type="email" id="email-field" class="form-control" placeholder="Enter Email" required />
+                                        <label for="email-field" class="form-label"><?= $lang["t-Direction"] ?></label>
+                                        <input type="email" id="email-field" class="form-control" placeholder="<?= $lang["t-Direction"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="phone-field" class="form-label">Phone</label>
-                                        <input type="text" id="phone-field" class="form-control" placeholder="Enter Phone no." required />
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Phone"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Phone"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="date-field" class="form-label">Joining Date</label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="Select Date" required />
+                                        <label for="date-field" class="form-label"><?= $lang["t-CodeBranch"] ?></label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-CodeBranch"] ?>" required />
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label for="date-field" class="form-label"><?= $lang["t-Email"] ?></label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Email"] ?>" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="date-field" class="form-label"><?= $lang["t-Country"] ?></label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Country"] ?>" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="date-field" class="form-label"><?= $lang["t-Image"] ?></label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Image"] ?>" required />
+                                    </div>
                                     <div>
                                         <label for="status-field" class="form-label">Status</label>
                                         <select class="form-control" data-trigger name="status-field" id="status-field">
@@ -451,9 +216,9 @@
                                 </div>
                                 <div class="modal-footer">
                                     <div class="hstack gap-2 justify-content-end">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
-                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
+                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddCompany'] ?></button>
+                                        <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button>
                                     </div>
                                 </div>
                             </form>

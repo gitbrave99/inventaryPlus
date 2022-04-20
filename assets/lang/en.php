@@ -55,12 +55,24 @@
     $lang["t-Country"] = "Country";
     $lang["t-Direction"] = "Direction";
     $lang["t-AddSuppliers"] = "Add Suppliers";
+    $lang["t-AddCompany"] = "Add Company";
+
 
 
     //Compras
     $lang["t-Invoice"] = "Invoice";
     $lang["t-Date"] = "Date";
     $lang["t-Sub"] = "Sub-total";
+    $lang["t-Buy"] = "Buy";
+    $lang["t-AddBuy"] = "Add Buy";
+
+    //Sucursales
+    $lang["t-NameBranch"] = "Branch";
+    $lang["t-CodeBranch"] = "Branch Code";
+    
+
+
+
 
     $lang["t-SellList"] = "Sale List";
     $lang["t-ListOfSuppliers"] = "List Of Suppliers";

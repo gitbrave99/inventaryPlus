@@ -395,7 +395,7 @@
                                 <div class="modal-footer">
                                     <div class="hstack gap-2 justify-content-end">
                                         <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
-                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddCategory'] ?></button>
+                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddBuy'] ?></button>
                                         <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button>
                                         <button type="button" class="btn btn-primary btn-sm" id="sa-success">Click me</button>
                                         <button type="button" class="btn btn-primary btn-sm" id="sa-error">Sweet alert wrong</button>

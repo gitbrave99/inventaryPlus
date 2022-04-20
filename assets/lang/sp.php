@@ -62,6 +62,16 @@ $lang["t-AddSuppliers"] = "Añadir Proveedor";
 $lang["t-Invoice"] = "Factura";
 $lang["t-Date"] = "Fecha";
 $lang["t-Sub"] = "Sub-total";
+$lang["t-Buy"] = "Compra";
+$lang["t-AddBuy"] = "Añadir Compra";
+
+//Sucursal
+$lang["t-NameBranch"] = "Sucursal";
+$lang["t-CodeBranch"] = "Codigo Sucursal";
+$lang["t-AddCompany"] = "Añadir Sucursal";
+
+
+
 
 $lang["t-SellList"] = "Lista De Venta";
 $lang["t-ListOfSuppliers"] = "Lista De Proveedores";

@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Compras</title>
+    <title><?= $lang["t-Buy"] ?></title>
     <?php include 'layouts/title-meta.php'; ?>
 
     <?php include 'layouts/head-css.php'; ?>
@@ -28,11 +28,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0">Lista de Compras</h4>
+                            <h4 class="mb-sm-0"><?= $lang["t-ListBuys"] ?></h4>
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Menu</a></li>
-                                    <li class="breadcrumb-item active">Compras</li>
+                                    <li class="breadcrumb-item active"><?= $lang["t-Buy"] ?></li>
                                 </ol>
                             </div>
 
@@ -51,7 +51,7 @@
                                         </span>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1">Total compras</p>
+                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1">Total <?= $lang["t-Buy"] ?>s</p>
                                         <h4 class=" mb-0">$<span class="counter-value" data-target="2390.68">0</span></h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end">
@@ -72,7 +72,7 @@
                                         </span>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1">Compras</p>
+                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1"><?= $lang["t-Buy"]?>s</p>
                                         <h4 class=" mb-0"><span class="counter-value" data-target="10">0</span></h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end">
@@ -88,7 +88,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title mb-0">Lista de Compras</h4>
+                                <h4 class="card-title mb-0"><?= $lang["t-ListBuys"] ?></h4>
                             </div><!-- end card header -->
 
                             <div class="card-body">
@@ -108,7 +108,7 @@
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
                                                 <div class="search-box ms-2">
-                                                    <input type="text" class="form-control search" placeholder="Search...">
+                                                    <input type="text" class="form-control search" placeholder="<?= $lang["t-search"] ?>">
                                                     <i class="ri-search-line search-icon"></i>
                                                 </div>
                                             </div>
@@ -117,45 +117,25 @@
 
                                     <div class="table-responsive table-card mt-3 mb-1">
                                         <table class="table align-middle table-nowrap" id="customerTable">
-                                            <thead class="table-light">
+                                        <thead class="table-light">
                                                 <tr>
                                                     <th scope="col" style="width: 50px;">
                                                         <div class="hstack flex-wrap gap-2">
                                                             <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
                                                         </div>
                                                     </th>
-                                                    <th class="sort" data-sort="customer_name">Customer</th>
-                                                    <th class="sort" data-sort="email">Email</th>
-                                                    <th class="sort" data-sort="phone">Phone</th>
-                                                    <th class="sort" data-sort="date">Joining Date</th>
-                                                    <th class="sort" data-sort="status">Delivery Status</th>
-                                                    <th class="sort" data-sort="action">Action</th>
+                                                    <th class="sort" data-sort="proveedor_name"><?= $lang["t-proveedor"] ?></th>
+                                                    <th class="sort" data-sort="customer_name"><?= $lang["t-Customer"] ?></th>
+                                                    <th class="sort" data-sort="Image"><?= $lang["t-Image"] ?></th>
+                                                    <th class="sort" data-sort="Factura"><?= $lang["t-Invoice"] ?></th>
+                                                    <th class="sort" data-sort="Date"><?= $lang["t-Date"] ?></th>
+                                                    <th class="sort" data-sort="Sub"><?= $lang["t-Sub"] ?></th>
+                                                    <th class="sort" data-sort="IVA">IVA</th>
+                                                    <th class="sort" data-sort="Total">Total</th>
+                                                    <th class="sort" data-sort="action"><?= $lang["t-Action"] ?></th>
                                                 </tr>
                                             </thead>
                                             <tbody class="list form-check-all">
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                                    <td class="customer_name">Mary Cousar</td>
-                                                    <td class="email">marycousar@velzon.com</td>
-                                                    <td class="phone">580-464-4694</td>
-                                                    <td class="date">06 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
 
                                                 <tr>
                                                     <th scope="row">
@@ -164,18 +144,22 @@
                                                         </div>
                                                     </th>
                                                     <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="customer_name">Kevin Dawson</td>
-                                                    <td class="email">kevindawson@velzon.com</td>
-                                                    <td class="phone">213-741-4294</td>
-                                                    <td class="date">14 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">kevin</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">01</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
+
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -183,22 +167,26 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option6">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2106</a></td>
-                                                    <td class="customer_name">Carolyn Jones</td>
-                                                    <td class="email">carolynjones@velzon.com</td>
-                                                    <td class="phone">414-453-5725</td>
-                                                    <td class="date">07 Jun, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">Melvin Orellana</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">02</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
+
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -206,22 +194,26 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option7">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2107</a></td>
-                                                    <td class="customer_name">Glen Matney</td>
-                                                    <td class="email">glenmatney@velzon.com</td>
-                                                    <td class="phone">515-395-1069</td>
-                                                    <td class="date">02 Nov, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">Mauricio Pleitez</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">03</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
+
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -229,22 +221,26 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option8">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2108</a></td>
-                                                    <td class="customer_name">Charles Kubik</td>
-                                                    <td class="email">charleskubik@velzon.com</td>
-                                                    <td class="phone">231-480-8536</td>
-                                                    <td class="date">25 Sep, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">David Hernandez</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">04</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
+
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -252,22 +248,26 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option9">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2109</a></td>
-                                                    <td class="customer_name">Herbert Stokes</td>
-                                                    <td class="email">herbertstokes@velzon.com</td>
-                                                    <td class="phone">312-944-1448</td>
-                                                    <td class="date">20 Jul, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">Balmore Landaverde</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">05</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
+
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -275,22 +275,26 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option10">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2110</a></td>
-                                                    <td class="customer_name">Timothy Smith</td>
-                                                    <td class="email">timothysmith@velzon.com</td>
-                                                    <td class="phone">973-277-6950</td>
-                                                    <td class="date">13 Dec, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">Roberto Moreno</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">06</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
+
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -298,26 +302,85 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option11">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2111</a></td>
-                                                    <td class="customer_name">Johnny Evans</td>
-                                                    <td class="email">johnnyevans@velzon.com</td>
-                                                    <td class="phone">407-645-1767</td>
-                                                    <td class="date">01 Oct, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">Diego Moreno</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">07</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
+
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
+                                                        </div>
+                                                    </th>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">Gorge Preza</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">08</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
+
+                                                    <td>
+                                                        <div class="d-flex gap-2">
+                                                            <div class="edit">
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
+                                                            </div>
+                                                            <div class="remove">
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
+                                                        </div>
+                                                    </th>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">Laura Maria</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">09</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
+
+                                                    <td>
+                                                        <div class="d-flex gap-2">
+                                                            <div class="edit">
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
+                                                            </div>
+                                                            <div class="remove">
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
@@ -325,18 +388,21 @@
                                                         </div>
                                                     </th>
                                                     <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2112</a></td>
-                                                    <td class="customer_name">Kevin Dawson</td>
-                                                    <td class="email">kevindawson@velzon.com</td>
-                                                    <td class="phone">213-741-4294</td>
-                                                    <td class="date">14 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="customer_name">Sindy Monrroy</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Factura">010</td>
+                                                    <td class="Date">14 Apr, 2021</td>
+                                                    <td class="Sub">$50</td>
+                                                    <td class="IVA">10%</td>
+                                                    <td class="Total">$55</td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -421,27 +487,47 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="customername-field" class="form-label">Customer Name</label>
-                                        <input type="text" id="customername-field" class="form-control" placeholder="Enter Name" required />
+                                        <label for="customername-field" class="form-label"><?= $lang["t-proveedor"] ?></label>
+                                        <input type="text" id="customername-field" class="form-control" placeholder="<?= $lang["t-proveedor"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="email-field" class="form-label">Email</label>
-                                        <input type="email" id="email-field" class="form-control" placeholder="Enter Email" required />
+                                        <label for="email-field" class="form-label"><?= $lang["t-Customer"] ?></label>
+                                        <input type="email" id="email-field" class="form-control" placeholder="<?= $lang["t-Customer"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="phone-field" class="form-label">Phone</label>
-                                        <input type="text" id="phone-field" class="form-control" placeholder="Enter Phone no." required />
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Image"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Image"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="date-field" class="form-label">Joining Date</label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="Select Date" required />
+                                        <label for="date-field" class="form-label"><?= $lang["t-Invoice"] ?></label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Invoice"] ?>" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="date-field" class="form-label"><?= $lang["t-Date"] ?></label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Date"] ?>" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="date-field" class="form-label"><?= $lang["t-Sub"] ?></label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Sub"] ?>" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="date-field" class="form-label">IVA</label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="IVA" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="date-field" class="form-label">Total</label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="Total" required />
                                     </div>
 
                                     <div>
-                                        <label for="status-field" class="form-label">Status</label>
+                                        <label for="status-field" class="form-label"><?= $lang["t-Status"] ?></label>
                                         <select class="form-control" data-trigger name="status-field" id="status-field">
                                             <option value="">Status</option>
                                             <option value="Active">Active</option>
@@ -451,9 +537,9 @@
                                 </div>
                                 <div class="modal-footer">
                                     <div class="hstack gap-2 justify-content-end">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
-                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
+                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
+                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddBuy'] ?></button>
+                                        <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button>
                                     </div>
                                 </div>
                             </form>
