@@ -31,6 +31,26 @@ $lang["t-Next"] = "Próximo";
 $lang["t-vertodos"] = "Ver todos";
 // traccion
 
+// productos
+
+$lang["t-Mark"] = "Marca";
+$lang["t-Model"] = "Modelo";
+$lang["t-Discontinued"] = "Descontinuado";
+$lang["t-Note"] = "Nota";
+$lang["t-Status"] = "Estado";
+
+//Category
+$lang["t-Description"] = "Descripción";
+$lang["t-Image"] = "Imagen";
+
+//Proveedor
+$lang["t-Country"] = "Ciudad";
+    
+//Compras
+$lang["t-Invoice"] = "Factura";
+$lang["t-Date"] = "Fecha";
+$lang["t-Sub"] = "Sub-total";
+
 $lang["t-SellList"] = "Lista De Venta";
 $lang["t-ListOfSuppliers"] = "Lista De Proveedores";
 $lang["t-BranchList"] = "Lista de sucursales";

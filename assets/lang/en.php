@@ -1,12 +1,13 @@
 <?php
     $lang["t-compras"]="Compras";
     $lang["t-ventas"]="Ventas";
-    $lang["t-proveedor"]="Proveedores";
     $lang["t-sucursal"]="Sucursales";
     $lang["t-producto"]="Productos";
     $lang["t-sucursal"]="Sucursales";
     $lang["t-empleado"]="Empleados";
+    $lang["t-proveedor"]="Proveedores";
     $lang["t-categoria"]="Categorias";
+
 
 
     $lang["t-WebApps"] = "Web Apps";
@@ -32,7 +33,24 @@
 
     $lang["t-vertodos"]="Ver todos";
 
+    //Productos
+    $lang["t-Mark"] = "Brand";
+    $lang["t-Model"] = "Model";
+    $lang["t-Discontinued"] = "Discontinued";
+    $lang["t-Note"] = "Note";
+    $lang["t-Status"] = "Status";
 
+    // Categoria
+    $lang["t-Description"] = "Description";
+    $lang["t-Image"] = "Image";
+
+    //Proveedores
+    $lang["t-Country"] = "Country";
+
+    //Compras
+    $lang["t-Invoice"] = "Invoice";
+    $lang["t-Date"] = "Date";
+    $lang["t-Sub"] = "Sub-total";
 
     $lang["t-SellList"] = "Sale List";
     $lang["t-ListOfSuppliers"] = "List Of Suppliers";
@@ -42,6 +60,11 @@
     $lang["t-ListOfCategory"] = "List Of Category";
 
     ///index actualizado dav
+
+
+    $lang["t-topproductos"]="Top productos";
+    $lang["t-topproveedores"]="Top proveedores";
+    $lang["t-ordenarpor"]="Ordenar por";
 
 
     $lang["t-topproductos"]="Top productos";
