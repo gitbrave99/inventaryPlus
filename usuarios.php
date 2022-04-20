@@ -82,12 +82,18 @@
                                                             <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
                                                         </div>
                                                     </th>
-                                                    <th class="sort" data-sort="customer_name">Customer</th>
-                                                    <th class="sort" data-sort="email">Email</th>
-                                                    <th class="sort" data-sort="phone">Phone</th>
-                                                    <th class="sort" data-sort="date">Joining Date</th>
-                                                    <th class="sort" data-sort="status">Delivery Status</th>
+                                                    <th class="sort" data-sort="NameUser"><?= $lang["t-NameUser"] ?></th>
+                                                    <th class="sort" data-sort="DuiUser"><?= $lang["t-DuiUser"] ?></th>
+                                                    <th class="sort" data-sort="Direction"><?= $lang["t-Direction"] ?></th>
+                                                    <th class="sort" data-sort="Email"><?= $lang["t-Email"] ?></th>
+                                                    <th class="sort" data-sort="Image"><?= $lang["t-Image"] ?></th>
+                                                    <th class="sort" data-sort="Note"><?= $lang["t-Note"] ?></th>
+                                                    <th class="sort" data-sort="Phone"><?= $lang["t-Phone"] ?></th>
+                                                    <th class="sort" data-sort="RolUser"><?= $lang["t-RolUser"] ?></th>
+                                                    <th class="sort" data-sort="NameBranch"><?= $lang["t-NameBranch"] ?></th>
+                                                    <th class="sort" data-sort="Status"><?= $lang["t-Status"] ?></th>
                                                     <th class="sort" data-sort="action">Action</th>
+
                                                 </tr>
                                             </thead>
                                             <tbody class="list form-check-all">
@@ -98,18 +104,24 @@
                                                         </div>
                                                     </th>
                                                     <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                                    <td class="customer_name">Mary Cousar</td>
-                                                    <td class="email">marycousar@velzon.com</td>
-                                                    <td class="phone">580-464-4694</td>
-                                                    <td class="date">06 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="NameUser">Mary Cousar</td>
+                                                    <td class="DuiUser">1234567-8</td>
+                                                    <td class="Direction">Col Santa Ana Norte, Santa Ana</td>
+                                                    <td class="Email">marycousar@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Nuevo</td>
+                                                    <td class="Phone">0581-5656</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -117,22 +129,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option2">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2102</a></td>
-                                                    <td class="customer_name">Jeff Taylor</td>
-                                                    <td class="email">jefftaylor@velzon.com</td>
-                                                    <td class="phone">863-577-5537</td>
-                                                    <td class="date">15 Feb, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Jeff Taylor</td>
+                                                    <td class="DuiUser">125347-8</td>
+                                                    <td class="Direction">Col Ivu, Santa Ana</td>
+                                                    <td class="Email">jefftaylor@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Nuevo</td>
+                                                    <td class="Phone">863-577-5537</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -140,22 +158,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option3">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2103</a></td>
-                                                    <td class="customer_name">Robert McMahon</td>
-                                                    <td class="email">robertmcmahon@velzon.com</td>
-                                                    <td class="phone">786-253-9927</td>
-                                                    <td class="date">12 Jan, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Robert McMahon</td>
+                                                    <td class="DuiUser">8734567-8</td>
+                                                    <td class="Direction">Col Sihua, Santa Ana</td>
+                                                    <td class="Email">robertmcmahon@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Exelente</td>
+                                                    <td class="Phone">786-253-9927</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -163,22 +187,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option4">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2104</a></td>
-                                                    <td class="customer_name">Michael Morris</td>
-                                                    <td class="email">michaelmorris@velzon.com</td>
-                                                    <td class="phone">805-447-8398</td>
-                                                    <td class="date">19 May, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Michael Morris</td>
+                                                    <td class="DuiUser">9834567-8</td>
+                                                    <td class="Direction">Col Rio Zarco, Santa Ana</td>
+                                                    <td class="Email">michaelmorris@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Nuevo</td>
+                                                    <td class="Phone">805-447-8398</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -186,22 +216,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="customer_name">Kevin Dawson</td>
-                                                    <td class="email">kevindawson@velzon.com</td>
-                                                    <td class="phone">213-741-4294</td>
-                                                    <td class="date">14 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Kevin Dawson</td>
+                                                    <td class="DuiUser">9894567-8</td>
+                                                    <td class="Direction">Col Pagani, Santa Ana</td>
+                                                    <td class="Email">kevindawson@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Exelente</td>
+                                                    <td class="Phone">213-741-4294</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -209,22 +245,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option6">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2106</a></td>
-                                                    <td class="customer_name">Carolyn Jones</td>
-                                                    <td class="email">carolynjones@velzon.com</td>
-                                                    <td class="phone">414-453-5725</td>
-                                                    <td class="date">07 Jun, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Carolyn Jones</td>
+                                                    <td class="DuiUser">1234567-8</td>
+                                                    <td class="Direction">Col Santa Ana Norte, Santa Ana</td>
+                                                    <td class="Email">carolynjones@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Nuevo</td>
+                                                    <td class="Phone">0581-5656</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -232,22 +274,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option7">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2107</a></td>
-                                                    <td class="customer_name">Glen Matney</td>
-                                                    <td class="email">glenmatney@velzon.com</td>
-                                                    <td class="phone">515-395-1069</td>
-                                                    <td class="date">02 Nov, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Glen Matney</td>
+                                                    <td class="DuiUser">1234567-8</td>
+                                                    <td class="Direction">Col Luis Talpa, Santa Ana</td>
+                                                    <td class="Email">glenmatney@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Excelente</td>
+                                                    <td class="Phone">231-480-8536</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -255,22 +303,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option8">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2108</a></td>
-                                                    <td class="customer_name">Charles Kubik</td>
-                                                    <td class="email">charleskubik@velzon.com</td>
-                                                    <td class="phone">231-480-8536</td>
-                                                    <td class="date">25 Sep, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Herbert Stokes</td>
+                                                    <td class="DuiUser">6757567-8</td>
+                                                    <td class="Direction">Col Santa Ana Norte, Santa Ana</td>
+                                                    <td class="Email">herbertstokes@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado desde 2 años</td>
+                                                    <td class="Phone">312-944-1448</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -278,22 +332,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option9">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2109</a></td>
-                                                    <td class="customer_name">Herbert Stokes</td>
-                                                    <td class="email">herbertstokes@velzon.com</td>
-                                                    <td class="phone">312-944-1448</td>
-                                                    <td class="date">20 Jul, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Timothy Smith</td>
+                                                    <td class="DuiUser">1234567-8</td>
+                                                    <td class="Direction">Col Santa Ana Norte, Santa Ana</td>
+                                                    <td class="Email">timothysmith@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Nuevo</td>
+                                                    <td class="Phone">973-277-6950</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -301,22 +361,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option10">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2110</a></td>
-                                                    <td class="customer_name">Timothy Smith</td>
-                                                    <td class="email">timothysmith@velzon.com</td>
-                                                    <td class="phone">973-277-6950</td>
-                                                    <td class="date">13 Dec, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Johnny Evans</td>
+                                                    <td class="DuiUser">1234987-8</td>
+                                                    <td class="Direction">Col Santa Ana Norte, Santa Ana</td>
+                                                    <td class="Email">johnnyevans@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Nuevo</td>
+                                                    <td class="Phone">407-645-1767</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -324,22 +390,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option11">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2111</a></td>
-                                                    <td class="customer_name">Johnny Evans</td>
-                                                    <td class="email">johnnyevans@velzon.com</td>
-                                                    <td class="phone">407-645-1767</td>
-                                                    <td class="date">01 Oct, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Kevin Dawson</td>
+                                                    <td class="DuiUser">552546-8</td>
+                                                    <td class="Direction">Col Peña Block D, Santa Ana</td>
+                                                    <td class="Email">kevindawson@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Nuevo</td>
+                                                    <td class="Phone">213-741-4294</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -347,22 +419,57 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option12">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2112</a></td>
-                                                    <td class="customer_name">Kevin Dawson</td>
-                                                    <td class="email">kevindawson@velzon.com</td>
-                                                    <td class="phone">213-741-4294</td>
-                                                    <td class="date">14 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Luis Mendez</td>
+                                                    <td class="DuiUser">1565567-8</td>
+                                                    <td class="Direction">Col Santa Ana Norte, Santa Ana</td>
+                                                    <td class="Email">Mendez44r@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Nuevo</td>
+                                                    <td class="Phone">9681-5656</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NameUser">Gladis Leyva</td>
+                                                    <td class="DuiUser">1238967-8</td>
+                                                    <td class="Direction">Col Santa Lucia, Santa Ana</td>
+                                                    <td class="Email">Gladis@velzon.com</td>
+                                                    <td class="Image">Image.PNG</td>
+                                                    <td class="Note">Empleado Nuevo</td>
+                                                    <td class="Phone">5655-9874</td>
+                                                    <td class="RolUser">Vendedor</td>
+                                                    <td class="NameBranch">OXXO</td>
+
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
+                                                    <td>
+                                                        <div class="d-flex gap-2">
+                                                            <div class="edit">
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
+                                                            </div>
+                                                            <div class="remove">
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -420,19 +527,40 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="customername-field" class="form-label">Nombre</label>
-                                        <input type="text" id="customername-field" class="form-control" placeholder="Enter Name" required />
+                                        <label for="customername-field" class="form-label"><?= $lang["t-NameUser"] ?></label>
+                                        <input type="text" id="customername-field" class="form-control" placeholder="<?= $lang["t-NameUser"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="email-field" class="form-label">Email</label>
-                                        <input type="email" id="email-field" class="form-control" placeholder="Enter Email" required />
+                                        <label for="email-field" class="form-label"><?= $lang["t-DuiUser"] ?></label>
+                                        <input type="email" id="email-field" class="form-control" placeholder="<?= $lang["t-DuiUser"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="phone-field" class="form-label">Phone</label>
-                                        <input type="text" id="phone-field" class="form-control" placeholder="Enter Phone no." required />
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Direction"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Direction"] ?>" required />
                                     </div>
+
+                                    <div class="mb-3">
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Email"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Email"] ?>" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Image"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Image"] ?>" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Note"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Note"] ?>" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Phone"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Phone"] ?>" required />
+                                    </div>
+                                    
                                     <div class="mb-3">
                                     <label for="tipoemp-field" class="form-label">Tipo</label>
                                         <select class="form-select mb-3" id="tipoemp-field" aria-label="Default select example">
@@ -443,8 +571,8 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="date-field" class="form-label">Joining Date</label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="Select Date" required />
+                                        <label for="phone-field" class="form-label"><?= $lang["t-NameBranch"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-NameBranch"] ?>" required />
                                     </div>
 
                                     <div>
@@ -458,9 +586,9 @@
                                 </div>
                                 <div class="modal-footer">
                                     <div class="hstack gap-2 justify-content-end">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
-                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
+                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddUser'] ?></button>
+                                        <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button>
                                     </div>
                                 </div>
                             </form>

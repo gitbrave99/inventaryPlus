@@ -70,6 +70,16 @@
     $lang["t-NameBranch"] = "Branch";
     $lang["t-CodeBranch"] = "Branch Code";
     
+    //Usuario
+    $lang["t-NameUser"] = "Employe";
+    $lang["t-DuiUser"] = "DUI";
+    $lang["t-PassUser"] = "Password";
+    $lang["t-RolUser"] = "Rol";
+    $lang["t-AddUser"] = "Add Employe";
+
+
+
+    
 
 
 

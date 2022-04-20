@@ -70,6 +70,13 @@ $lang["t-NameBranch"] = "Sucursal";
 $lang["t-CodeBranch"] = "Codigo Sucursal";
 $lang["t-AddCompany"] = "Añadir Sucursal";
 
+//Usuario
+$lang["t-NameUser"] = "Empleado";
+$lang["t-DuiUser"] = "DUI";
+$lang["t-PassUser"] = "Contraseña";
+$lang["t-RolUser"] = "Rol";
+$lang["t-AddUser"] = "Añadir Empleado";
+
 
 
 
