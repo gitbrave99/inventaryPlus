@@ -31,11 +31,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0">Lista de Categorias</h4>
+                            <h4 class="mb-sm-0"><?= $lang["t-ListOfCategory"] ?></h4>
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Menu</a></li>
-                                    <li class="breadcrumb-item active">Categorias</li>
+                                    <li class="breadcrumb-item active"><?= $lang["t-NameCategory"] ?></li>
                                 </ol>
                             </div>
 
@@ -48,7 +48,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title mb-0">Lista de Categorias</h4>
+                                <h4 class="card-title mb-0"><?= $lang["t-ListOfCategory"] ?></h4>
                             </div><!-- end card header -->
 
                             <div class="card-body">
@@ -68,7 +68,7 @@
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
                                                 <div class="search-box ms-2">
-                                                    <input type="text" class="form-control search" placeholder="Search...">
+                                                    <input type="text" class="form-control search" placeholder="<?= $lang["t-search"] ?>">
                                                     <i class="ri-search-line search-icon"></i>
                                                 </div>
                                             </div>
@@ -84,7 +84,7 @@
                                                                 <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
                                                             </div>
                                                         </th>
-                                                        <th class="sort" data-sort="categoria_name"><?= $lang["t-categoria"] ?></th>
+                                                        <th class="sort" data-sort="categoria_name"><?= $lang["t-NameCategory"] ?></th>
                                                         <th class="sort" data-sort="Description"><?= $lang["t-Description"] ?></th>
                                                         <th class="sort" data-sort="Image"><?= $lang["t-Image"] ?></th>
                                                         <th class="sort" data-sort="Status"><?= $lang["t-Status"] ?></th>
@@ -330,11 +330,13 @@
                                     <div class="d-flex justify-content-end">
                                         <div class="pagination-wrap hstack gap-2">
                                             <a class="page-item pagination-prev disabled" href="#">
-                                                Previous
+                                                
+                                                <?= $lang["t-Previous"] ?>
+
                                             </a>
                                             <ul class="pagination listjs-pagination mb-0"></ul>
                                             <a class="page-item pagination-next" href="#">
-                                                Next
+                                            <?= $lang["t-Next"] ?>
                                             </a>
                                         </div>
                                     </div>
@@ -355,7 +357,7 @@
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header bg-light p-3">
-                                <h5 class="modal-title" id="exampleModlLabel">Agregar categoria</h5>
+                                <h5 class="modal-title" id="exampleModlLabel"><?= $lang['t-AddCategory'] ?></h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
                             </div>
                             <form>
@@ -367,27 +369,22 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="customername-field" class="form-label">Nombre</label>
-                                        <input type="text" id="customername-field" class="form-control" placeholder="Enter Name" required />
+                                        <label for="customername-field" class="form-label"><?= $lang["t-NameCategory"] ?></label>
+                                        <input type="text" id="customername-field" class="form-control" placeholder="<?= $lang["t-NameCategory"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="email-field" class="form-label">Descripción</label>
-                                        <input type="email" id="email-field" class="form-control" placeholder="Enter Email" required />
+                                        <label for="email-field" class="form-label"><?= $lang["t-Description"] ?></label>
+                                        <input type="email" id="email-field" class="form-control" placeholder="<?= $lang["t-Description"] ?>"required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="phone-field" class="form-label">Phone</label>
-                                        <input type="text" id="phone-field" class="form-control" placeholder="Enter Phone no." required />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="date-field" class="form-label">Joining Date</label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="Select Date" required />
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Image"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Image"] ?>" required />
                                     </div>
 
                                     <div>
-                                        <label for="status-field" class="form-label">Status</label>
+                                        <label for="status-field" class="form-label"><?= $lang["t-Status"] ?></label>
                                         <select class="form-control" data-trigger name="status-field" id="status-field">
                                             <option value="">Status</option>
                                             <option value="Active">Active</option>
@@ -397,9 +394,9 @@
                                 </div>
                                 <div class="modal-footer">
                                     <div class="hstack gap-2 justify-content-end">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
-                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
+                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddCategory'] ?></button>
+                                        <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button>
                                         <button type="button" class="btn btn-primary btn-sm" id="sa-success">Click me</button>
                                         <button type="button" class="btn btn-primary btn-sm" id="sa-error">Sweet alert wrong</button>
                                     </div>

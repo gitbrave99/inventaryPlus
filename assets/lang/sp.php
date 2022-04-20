@@ -38,13 +38,25 @@ $lang["t-Model"] = "Modelo";
 $lang["t-Discontinued"] = "Descontinuado";
 $lang["t-Note"] = "Nota";
 $lang["t-Status"] = "Estado";
+$lang["t-AddProduct"] = "Añadir Producto";
+
 
 //Category
 $lang["t-Description"] = "Descripción";
 $lang["t-Image"] = "Imagen";
+$lang["t-AddCategory"] = "Añadir Categoria";
+$lang["t-UpdateCategory"] = "Actualizar";
+$lang["t-CloseCategory"] = "Cerrar";
+$lang["t-NameCategory"] = "Categoria";
+
+
+
 
 //Proveedor
 $lang["t-Country"] = "Ciudad";
+$lang["t-Direction"] = "Dirección";
+$lang["t-AddSuppliers"] = "Añadir Proveedor";
+
     
 //Compras
 $lang["t-Invoice"] = "Factura";

@@ -39,13 +39,23 @@
     $lang["t-Discontinued"] = "Discontinued";
     $lang["t-Note"] = "Note";
     $lang["t-Status"] = "Status";
+    $lang["t-AddProduct"] = "Add Product";
 
     // Categoria
     $lang["t-Description"] = "Description";
     $lang["t-Image"] = "Image";
+    $lang["t-AddCategory"] = "Add Category";
+    $lang["t-UpdateCategory"] = "Update";
+    $lang["t-CloseCategory"] = "Close";
+    $lang["t-NameCategory"] = "Category";
+
+
 
     //Proveedores
     $lang["t-Country"] = "Country";
+    $lang["t-Direction"] = "Direction";
+    $lang["t-AddSuppliers"] = "Add Suppliers";
+
 
     //Compras
     $lang["t-Invoice"] = "Invoice";
