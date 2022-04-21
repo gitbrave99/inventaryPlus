@@ -77,6 +77,11 @@ $lang["t-PassUser"] = "Contraseña";
 $lang["t-RolUser"] = "Rol";
 $lang["t-AddUser"] = "Añadir Empleado";
 
+//Venta
+$lang["t-Sale"] = "Venta";
+$lang["t-NInvoice"] = "Numero Factura";
+$lang["t-Discount"] = "Descuento";
+$lang["t-AddSale"] = "Añadir Venta";
 
 
 

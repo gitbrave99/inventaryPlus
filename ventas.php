@@ -28,11 +28,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0">Lista de Ventas</h4>
+                            <h4 class="mb-sm-0"><?= $lang["t-SellList"] ?></h4>
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Menu</a></li>
-                                    <li class="breadcrumb-item active">Ventas</li>
+                                    <li class="breadcrumb-item active"><?= $lang["t-Sale"] ?>s</li>
                                 </ol>
                             </div>
 
@@ -51,12 +51,12 @@
                                         </span>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1">Total venta</p>
+                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1">Total <?= $lang["t-Sale"] ?></p>
                                         <h4 class=" mb-0">$<span class="counter-value" data-target="2390.68">0</span></h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end">
                                         <!-- <span class="badge badge-soft-success"><i class="ri-arrow-up-s-fill align-middle me-1"></i>6.24 %<span> -->
-                                            </span></span>
+                                        </span></span>
                                     </div>
                                 </div>
                             </div><!-- end card body -->
@@ -72,12 +72,12 @@
                                         </span>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1">Ventas</p>
+                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1"><?= $lang["t-Sale"] ?></p>
                                         <h4 class=" mb-0"><span class="counter-value" data-target="10">0</span></h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end">
                                         <!-- <span class="badge badge-soft-success"><i class="ri-arrow-up-s-fill align-middle me-1"></i>3.67 %<span> -->
-                                            </span></span>
+                                        </span></span>
                                     </div>
                                 </div>
                             </div><!-- end card body -->
@@ -88,7 +88,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title mb-0">Lista de Compras</h4>
+                                <h4 class="card-title mb-0"><?= $lang["t-SellList"] ?></h4>
                             </div><!-- end card header -->
 
                             <div class="card-body">
@@ -108,7 +108,7 @@
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
                                                 <div class="search-box ms-2">
-                                                    <input type="text" class="form-control search" placeholder="Search...">
+                                                    <input type="text" class="form-control search" placeholder="<?= $lang["t-search"] ?>">
                                                     <i class="ri-search-line search-icon"></i>
                                                 </div>
                                             </div>
@@ -120,15 +120,18 @@
                                             <thead class="table-light">
                                                 <tr>
                                                     <th scope="col" style="width: 50px;">
-                                                    <div class="hstack flex-wrap gap-2">
+                                                        <div class="hstack flex-wrap gap-2">
                                                             <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
                                                         </div>
                                                     </th>
-                                                    <th class="sort" data-sort="customer_name">Customer</th>
-                                                    <th class="sort" data-sort="email">Email</th>
-                                                    <th class="sort" data-sort="phone">Phone</th>
-                                                    <th class="sort" data-sort="date">Joining Date</th>
-                                                    <th class="sort" data-sort="status">Delivery Status</th>
+                                                    <th class="sort" data-sort="NInvoice"><?= $lang["t-NInvoice"] ?></th>
+                                                    <th class="sort" data-sort="Date"><?= $lang["t-Date"] ?></th>
+                                                    <th class="sort" data-sort="Sub"><?= $lang["t-Sub"] ?></th>
+                                                    <th class="sort" data-sort="Discount"><?= $lang["t-Discount"] ?></th>
+                                                    <th class="sort" data-sort="Total">Total</th>
+                                                    <th class="sort" data-sort="NameUser"><?= $lang["t-NameUser"] ?></th>
+                                                    <th class="sort" data-sort="Customer"><?= $lang["t-Customer"] ?></th>
+                                                    <th class="sort" data-sort="status"><?= $lang["t-Status"] ?></th>
                                                     <th class="sort" data-sort="action">Action</th>
                                                 </tr>
                                             </thead>
@@ -140,42 +143,21 @@
                                                         </div>
                                                     </th>
                                                     <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                                    <td class="customer_name">Mary Cousar</td>
-                                                    <td class="email">marycousar@velzon.com</td>
-                                                    <td class="phone">580-464-4694</td>
-                                                    <td class="date">06 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="NInvoice">01</td>
+                                                    <td class="Date">06 Apr, 2021</td>
+                                                    <td class="Sub">$5.50</td>
+                                                    <td class="Discount">$1.00</td>
+                                                    <td class="Total">$4.50</td>
+                                                    <td class="NameUser">Luisa Aguilar</td>
+                                                    <td class="Customer">Mary Cousar</td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="customer_name">Kevin Dawson</td>
-                                                    <td class="email">kevindawson@velzon.com</td>
-                                                    <td class="phone">213-741-4294</td>
-                                                    <td class="date">14 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -183,22 +165,25 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option6">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2106</a></td>
-                                                    <td class="customer_name">Carolyn Jones</td>
-                                                    <td class="email">carolynjones@velzon.com</td>
-                                                    <td class="phone">414-453-5725</td>
-                                                    <td class="date">07 Jun, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NInvoice">02</td>
+                                                    <td class="Date">06 Apr, 2021</td>
+                                                    <td class="Sub">$6.50</td>
+                                                    <td class="Discount">$1.00</td>
+                                                    <td class="Total">$5.50</td>
+                                                    <td class="NameUser">Melvin Perez</td>
+                                                    <td class="Customer">Mary Cousar</td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -206,22 +191,25 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option7">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2107</a></td>
-                                                    <td class="customer_name">Glen Matney</td>
-                                                    <td class="email">glenmatney@velzon.com</td>
-                                                    <td class="phone">515-395-1069</td>
-                                                    <td class="date">02 Nov, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NInvoice">03</td>
+                                                    <td class="Date">06 Apr, 2021</td>
+                                                    <td class="Sub">$8.50</td>
+                                                    <td class="Discount">$1.00</td>
+                                                    <td class="Total">$7.50</td>
+                                                    <td class="NameUser">Paco Raban</td>
+                                                    <td class="Customer">Jeff Taylor</td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -229,22 +217,25 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option8">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2108</a></td>
-                                                    <td class="customer_name">Charles Kubik</td>
-                                                    <td class="email">charleskubik@velzon.com</td>
-                                                    <td class="phone">231-480-8536</td>
-                                                    <td class="date">25 Sep, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NInvoice">04</td>
+                                                    <td class="Date">07 Apr, 2021</td>
+                                                    <td class="Sub">$10.50</td>
+                                                    <td class="Discount">$1.00</td>
+                                                    <td class="Total">$9.50</td>
+                                                    <td class="NameUser">Pablo Escobar</td>
+                                                    <td class="Customer">Robert McMahon</td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -252,22 +243,25 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option9">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2109</a></td>
-                                                    <td class="customer_name">Herbert Stokes</td>
-                                                    <td class="email">herbertstokes@velzon.com</td>
-                                                    <td class="phone">312-944-1448</td>
-                                                    <td class="date">20 Jul, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NInvoice">05</td>
+                                                    <td class="Date">08 Apr, 2021</td>
+                                                    <td class="Sub">$20.00</td>
+                                                    <td class="Discount">$2.00</td>
+                                                    <td class="Total">$18.00</td>
+                                                    <td class="NameUser">Sonia Hernandez</td>
+                                                    <td class="Customer">Michael Morris</td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -275,22 +269,25 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option10">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2110</a></td>
-                                                    <td class="customer_name">Timothy Smith</td>
-                                                    <td class="email">timothysmith@velzon.com</td>
-                                                    <td class="phone">973-277-6950</td>
-                                                    <td class="date">13 Dec, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NInvoice">06</td>
+                                                    <td class="Date">07 Apr, 2021</td>
+                                                    <td class="Sub">$5.50</td>
+                                                    <td class="Discount">$1.00</td>
+                                                    <td class="Total">$4.50</td>
+                                                    <td class="NameUser">Angel Trigueros</td>
+                                                    <td class="Customer">Mary Cousar</td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -298,45 +295,25 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option11">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2111</a></td>
-                                                    <td class="customer_name">Johnny Evans</td>
-                                                    <td class="email">johnnyevans@velzon.com</td>
-                                                    <td class="phone">407-645-1767</td>
-                                                    <td class="date">01 Oct, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="NInvoice">07</td>
+                                                    <td class="Date">08 Apr, 2021</td>
+                                                    <td class="Sub">$2.50</td>
+                                                    <td class="Discount">$0.00</td>
+                                                    <td class="Total">$2.50</td>
+                                                    <td class="NameUser">Maria Luisa</td>
+                                                    <td class="Customer">Mary Cousar</td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option12">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2112</a></td>
-                                                    <td class="customer_name">Kevin Dawson</td>
-                                                    <td class="email">kevindawson@velzon.com</td>
-                                                    <td class="phone">213-741-4294</td>
-                                                    <td class="date">14 Apr, 2021</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Edit</button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -357,11 +334,11 @@
                                     <div class="d-flex justify-content-end">
                                         <div class="pagination-wrap hstack gap-2">
                                             <a class="page-item pagination-prev disabled" href="#">
-                                                Previous
+                                                <?= $lang["t-Previous"] ?>
                                             </a>
                                             <ul class="pagination listjs-pagination mb-0"></ul>
                                             <a class="page-item pagination-next" href="#">
-                                                Next
+                                                <?= $lang["t-Next"] ?>
                                             </a>
                                         </div>
                                     </div>
@@ -421,39 +398,54 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="customername-field" class="form-label">Customer Name</label>
-                                        <input type="text" id="customername-field" class="form-control" placeholder="Enter Name" required />
+                                        <label for="customername-field" class="form-label"><?= $lang["t-NInvoice"] ?></label>
+                                        <input type="text" id="customername-field" class="form-control" placeholder="<?= $lang["t-NInvoice"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="email-field" class="form-label">Email</label>
-                                        <input type="email" id="email-field" class="form-control" placeholder="Enter Email" required />
+                                        <label for="email-field" class="form-label"><?= $lang["t-Date"] ?></label>
+                                        <input type="email" id="email-field" class="form-control" placeholder="<?= $lang["t-Date"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="phone-field" class="form-label">Phone</label>
-                                        <input type="text" id="phone-field" class="form-control" placeholder="Enter Phone no." required />
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Sub"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Sub"] ?>" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="date-field" class="form-label">Joining Date</label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="Select Date" required />
+                                        <label for="phone-field" class="form-label"><?= $lang["t-Discount"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Discount"] ?>" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="phone-field" class="form-label">Total</label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="Total" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="phone-field" class="form-label"><?= $lang["t-NameUser"] ?></label>
+                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-NameUser"] ?>" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="date-field" class="form-label"><?= $lang["t-Customer"] ?></label>
+                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Customer"] ?>" required />
                                     </div>
 
                                     <div>
-                                        <label for="status-field" class="form-label">Status</label>
+                                        <label for="status-field" class="form-label"><?= $lang["t-Status"] ?></label>
                                         <select class="form-control" data-trigger name="status-field" id="status-field">
-                                            <option value="">Status</option>
-                                            <option value="Active">Active</option>
-                                            <option value="Block">Block</option>
+                                            <option value=""><?= $lang["t-Status"] ?></option>
+                                            <option value="Active"><?= $lang["t-Active"] ?></option>
+                                            <option value="Block"><?= $lang["t-Block"] ?></option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="hstack gap-2 justify-content-end">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
-                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang["t-CloseCategory"] ?></button>
+                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang["t-Sale"] ?></button>
+                                        <button type="button" class="btn btn-success" id="edit-btn"><?= $lang["t-UpdateCategory"] ?></button>
                                     </div>
                                 </div>
                             </form>

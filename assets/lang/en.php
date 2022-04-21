@@ -78,9 +78,11 @@
     $lang["t-AddUser"] = "Add Employe";
 
 
-
-    
-
+    //Venta
+    $lang["t-Sale"] = "Sale";
+    $lang["t-NInvoice"] = "Invoice Number";
+    $lang["t-Discount"] = "Discount";
+    $lang["t-AddSale"] = "Add Sale";
 
 
 
