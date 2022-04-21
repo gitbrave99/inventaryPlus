@@ -33,27 +33,34 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                            <div class="card-header">
+                        <div class="card-header">
                                 <h4 class="card-title mb-0">Lista de Productos</h4>
                             </div>
 
                             <div class="card-body">
                                 <div id="customerList">
+
+
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
-                                            <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
-                                                <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
-                                            </button>
 
+                                            <div>
+                                                <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
+                                                    <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                    <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                    <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
@@ -66,7 +73,7 @@
                                     </div>
 
                                     <div class="table-responsive table-card mt-3 mb-1">
-                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                    <table class="table align-middle table-nowrap" id="customerTable">
                                             <thead class="table-light">
                                                 <tr>
                                                     <th scope="col" style="width: 50px;">
@@ -654,11 +661,11 @@
                                     <div class="d-flex justify-content-end">
                                         <div class="pagination-wrap hstack gap-2">
                                             <a class="page-item pagination-prev disabled" href="#">
-                                                <?= $lang["t-Previous"] ?>
+                                                Previous
                                             </a>
                                             <ul class="pagination listjs-pagination mb-0"></ul>
                                             <a class="page-item pagination-next" href="#">
-                                                <?= $lang["t-Next"] ?>
+                                                Next
                                             </a>
                                         </div>
                                     </div>
@@ -666,13 +673,18 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
+
+
+
+
 
                 <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header bg-light p-3">
-                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                <h5 class="modal-title" id="exampleModalLabe">Añadir producto</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
                             </div>
                             <form>
@@ -751,17 +763,25 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <?php include 'layouts/footer.php'; ?>
     </div>
 </div>
 
+
+<?php include 'layouts/customizer.php'; ?>
+
 <?php include 'layouts/vendor-scripts.php'; ?>
 <script src="assets/libs/prismjs/prism.js"></script>
 <script src="assets/libs/list.js/list.min.js"></script>
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
+
+
 <script src="assets/js/pages/listjs.init.js"></script>
+
+
 <script src="assets/js/app.js"></script>
 </body>
 

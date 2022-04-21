@@ -1,5 +1,4 @@
 <?php
-// include language configuration file based on selected language
 $lng = "en";
 if (isset($_GET['lang'])) {
    $lng = $_GET['lang'];

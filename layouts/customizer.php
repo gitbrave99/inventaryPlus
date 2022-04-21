@@ -1,14 +1,7 @@
-<div class="customizer-setting d-none d-md-block">
-    <div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2" data-bs-toggle="offcanvas"
-        data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas">
-        <i class='mdi mdi-spin mdi-cog-outline fs-22'></i>
-    </div>
-</div>
 
-<!-- Theme Settings -->
 <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="theme-settings-offcanvas">
     <div class="d-flex align-items-center bg-primary bg-gradient p-3 offcanvas-header">
-        <h5 class="m-0 me-2 text-white">Tema disponibles</h5>
+        <h5 class="m-0 me-2 text-white">Theme Customizer</h5>
 
         <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
@@ -16,8 +9,8 @@
     <div class="offcanvas-body p-0">
         <div data-simplebar class="h-100">
             <div class="p-4">
-                <h6 class="mb-0 fw-semibold text-uppercase fs-12">Diseño</h6>
-                <p class="text-muted">Elije el diseño</p>
+                <h6 class="mb-0 fw-semibold text-uppercase fs-12">Layout</h6>
+                <p class="text-muted">Choose your layout</p>
 
                 <div class="row">
                     <div class="col-4">
@@ -94,13 +87,13 @@
                                 </span>
                             </label>
                         </div>
-                        <h5 class="fs-13 text-center mt-2">Dos Columnas</h5>
+                        <h5 class="fs-13 text-center mt-2">Two Column</h5>
                     </div>
                     <!-- end col -->
                 </div>
 
-                <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Color de fondo</h6>
-                <p class="text-muted">Fondo día o Noche</p>
+                <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Color Scheme</h6>
+                <p class="text-muted">Choose Light or Dark Scheme.</p>
 
                 <div class="colorscheme-cardradio">
                     <div class="row">
@@ -127,7 +120,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Día</h5>
+                            <h5 class="fs-13 text-center mt-2">Light</h5>
                         </div>
     
                         <div class="col-4">
@@ -153,14 +146,14 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Noche</h5>
+                            <h5 class="fs-13 text-center mt-2">Dark</h5>
                         </div>
                     </div>
                 </div>
 
                 <div id="layout-width">
-                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Ancho de diseño</h6>
-                    <p class="text-muted">Diseño fluido o en caja.</p>
+                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Layout Width</h6>
+                    <p class="text-muted">Choose Fluid or Boxed layout.</p>
 
                     <div class="row">
                         <div class="col-4">
@@ -186,7 +179,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Fluido</h5>
+                            <h5 class="fs-13 text-center mt-2">Fluid</h5>
                         </div>
                         <div class="col-4">
                             <div class="form-check card-radio">
@@ -211,27 +204,27 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Caja</h5>
+                            <h5 class="fs-13 text-center mt-2">Boxed</h5>
                         </div>
                     </div>
                 </div>
 
                 <div id="layout-position">
-                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Posición de diseño</h6>
-                    <p class="text-muted">Posición de diseño fijo o desplazable</p>
+                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Layout Position</h6>
+                    <p class="text-muted">Choose Fixed or Scrollable Layout Position.</p>
 
                     <div class="btn-group radio" role="group">
                         <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-fixed"
                             value="fixed">
-                        <label class="btn btn-light w-sm" for="layout-position-fixed">Fijo</label>
+                        <label class="btn btn-light w-sm" for="layout-position-fixed">Fixed</label>
 
                         <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-scrollable"
                             value="scrollable">
-                        <label class="btn btn-light w-sm ms-0" for="layout-position-scrollable">Desplazable</label>
+                        <label class="btn btn-light w-sm ms-0" for="layout-position-scrollable">Scrollable</label>
                     </div>
                 </div>
-                <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Fondo de topbar</h6>
-                <p class="text-muted">Fondo día o noche</p>
+                <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Topbar Color</h6>
+                <p class="text-muted">Choose Light or Dark Topbar Color.</p>
 
                 <div class="row">
                     <div class="col-4">
@@ -257,7 +250,7 @@
                                 </span>
                             </label>
                         </div>
-                        <h5 class="fs-13 text-center mt-2">Día</h5>
+                        <h5 class="fs-13 text-center mt-2">Light</h5>
                     </div>
                     <div class="col-4">
                         <div class="form-check card-radio">
@@ -282,13 +275,13 @@
                                 </span>
                             </label>
                         </div>
-                        <h5 class="fs-13 text-center mt-2">Noche</h5>
+                        <h5 class="fs-13 text-center mt-2">Dark</h5>
                     </div>
                 </div>
 
                 <div id="sidebar-size">
-                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Ancho de Sidebar</h6>
-                    <p class="text-muted">Anchura</p>
+                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Sidebar Size</h6>
+                    <p class="text-muted">Choose a size of Sidebar.</p>
 
                     <div class="row">
                         <div class="col-4">
@@ -314,7 +307,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Por defecto</h5>
+                            <h5 class="fs-13 text-center mt-2">Default</h5>
                         </div>
 
                         <div class="col-4">
@@ -340,7 +333,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Compacto</h5>
+                            <h5 class="fs-13 text-center mt-2">Compact</h5>
                         </div>
 
                         <div class="col-4">
@@ -366,7 +359,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Pequeña vista</h5>
+                            <h5 class="fs-13 text-center mt-2">Small (Icon View)</h5>
                         </div>
 
                         <div class="col-4">
@@ -392,14 +385,14 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Pequeña vista flotante</h5>
+                            <h5 class="fs-13 text-center mt-2">Small Hover View</h5>
                         </div>
                     </div>
                 </div>
 
                 <div id="sidebar-view">
-                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Vista del sidebar</h6>
-                    <p class="text-muted">Vista de barra lateral predeterminada o independiente</p>
+                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Sidebar View</h6>
+                    <p class="text-muted">Choose Default or Detached Sidebar view.</p>
 
                     <div class="row">
                         <div class="col-4">
@@ -425,7 +418,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Por defecto</h5>
+                            <h5 class="fs-13 text-center mt-2">Default</h5>
                         </div>
                         <div class="col-4">
                             <div class="form-check sidebar-setting card-radio">
@@ -451,13 +444,13 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Separado</h5>
+                            <h5 class="fs-13 text-center mt-2">Detached</h5>
                         </div>
                     </div>
                 </div>
                 <div id="sidebar-color">
-                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Fondo de Sidebar</h6>
-                    <p class="text-muted">Fondo día o noche</p>
+                    <h6 class="mt-4 mb-0 fw-semibold text-uppercase fs-12">Sidebar Color</h6>
+                    <p class="text-muted">Choose Ligth or Dark Sidebar Color.</p>
 
                     <div class="row">
                         <div class="col-4">
@@ -483,7 +476,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Día</h5>
+                            <h5 class="fs-13 text-center mt-2">Light</h5>
                         </div>
                         <div class="col-4">
                             <div class="form-check sidebar-setting card-radio">
@@ -508,7 +501,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="fs-13 text-center mt-2">Noche</h5>
+                            <h5 class="fs-13 text-center mt-2">Dark</h5>
                         </div>
                     </div>
                 </div>
@@ -520,10 +513,10 @@
     <div class="offcanvas-footer border-top p-3 text-center">
         <div class="row">
             <div class="col-6">
-                <button type="button" class="btn btn-light w-100" id="reset-layout">Resetear</button>
+                <button type="button" class="btn btn-light w-100" id="reset-layout">Reset</button>
             </div>
             <div class="col-6">
-                <button type="button" class="btn btn-primary w-100">Mostrar</button>
+                <button type="button" class="btn btn-primary w-100">Preview</button>
             </div>
         </div>
     </div>

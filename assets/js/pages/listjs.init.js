@@ -1,18 +1,3 @@
-/*
-Template Name: Velzon - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://Themesbrand.com/
-Contact: Themesbrand@gmail.com
-File: list Js File
-
-
-*/
-
-// flatpickr('#date-field', {
-//   dateFormat: "d M, Y",
-// });
-
-
 var checkAll = document.getElementById("checkAll");
 if (checkAll) {
     checkAll.onclick = function () {
@@ -36,10 +21,9 @@ var perPage = 8;
 var options = {
     valueNames: [
         "id",
-        "customer_name",
-        "email",
-        "date",
-        "phone",
+        "categoria",
+        "descripcion",
+        "imagen",
         "status",
     ],
     page: perPage,
@@ -369,25 +353,12 @@ var attroptions = {
         }
     ]
 };
-var attrList = new List('users', attroptions);
-attrList.add({
-    name: 'Leia',
-    born: '1954',
-    image: 'assets/images/users/avatar-5.jpg',
-    id: 5,
-    timestamp: '67893'
-});
+ 
 
 
 // Existing List
 
-var existOptionsList = {
-    valueNames: ['contact-name', 'contact-message']
-};
-
-var existList = new List('contact-existing-list', existOptionsList);
-
-
+ 
 // Fuzzy Search list
 var fuzzySearchList = new List('fuzzysearch-list', {
     valueNames: ['name']

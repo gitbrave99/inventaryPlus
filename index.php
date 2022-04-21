@@ -3,12 +3,11 @@
 
 <head>
 
-    <title>Inicio</title>
+    <title>Home</title>
     <?php include 'layouts/title-meta.php'; ?>
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
 
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
-
     <?php include 'layouts/head-css.php'; ?>
 
 </head>
@@ -16,9 +15,9 @@
 <?php include 'layouts/body.php'; ?>
 
 <div id="layout-wrapper">
-
     <?php include 'layouts/menu.php'; ?>
     <div class="main-content">
+
         <div class="page-content">
             <div class="container-fluid">
                 <div class="row">
@@ -35,7 +34,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col">
 
@@ -105,7 +103,7 @@
                                                 </div>
                                                 <div class="flex-shrink-0">
                                                     <h5 class="text-danger fs-14 mb-0">
-                                                        
+
                                                     </h5>
                                                 </div>
                                             </div>
@@ -135,7 +133,7 @@
                                                 </div>
                                                 <div class="flex-shrink-0">
                                                     <h5 class="text-success fs-14 mb-0">
-                                                        
+
                                                     </h5>
                                                 </div>
                                             </div>
@@ -208,7 +206,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
 
                             <!-- POSIBLES GRAFICAS  -->
                             <!-- <div class="row">
@@ -517,20 +515,29 @@
 
 
                         </div>
-                    </div>       
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <?php include 'layouts/footer.php'; ?>
         </div>
-        <?php include 'layouts/footer.php'; ?>
     </div>
-</div>
-<!-- <?php include 'layouts/customizer.php'; ?> -->
 
-<?php include 'layouts/vendor-scripts.php'; ?>
-<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-<script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-<script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
-<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-<script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
-<script src="assets/js/app.js"></script>
-</body>
 
-</html>
+    <?php include 'layouts/customizer.php'; ?>
+
+    <?php include 'layouts/vendor-scripts.php'; ?>
+    
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+
+    <script src="assets/js/app.js"></script>
+    </body>
+
+    </html>

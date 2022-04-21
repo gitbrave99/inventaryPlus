@@ -19,7 +19,6 @@
 
         <div class="page-content">
             <div class="container-fluid">
-
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -30,30 +29,37 @@
                                     <li class="breadcrumb-item active"><?= $lang["t-ListOfEmployees"] ?></li>
                                 </ol>
                             </div>
-
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0"><?= $lang["t-ListOfEmployees"] ?></h4>
-                            </div> 
+                            </div>
 
                             <div class="card-body">
                                 <div id="customerList">
+
+
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
-                                            <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
-                                                <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
-                                            </button>
+
+                                            <div>
+                                                <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
+                                                    <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                    <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                    <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
@@ -70,7 +76,7 @@
                                             <thead class="table-light">
                                                 <tr>
                                                     <th scope="col" style="width: 50px;">
-                                                    <div class="hstack flex-wrap gap-2">
+                                                        <div class="hstack flex-wrap gap-2">
                                                             <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
                                                         </div>
                                                     </th>
@@ -482,11 +488,11 @@
                                     <div class="d-flex justify-content-end">
                                         <div class="pagination-wrap hstack gap-2">
                                             <a class="page-item pagination-prev disabled" href="#">
-                                            <?= $lang["t-Previous"] ?>
+                                                Previous
                                             </a>
                                             <ul class="pagination listjs-pagination mb-0"></ul>
                                             <a class="page-item pagination-next" href="#">
-                                            <?= $lang["t-Next"] ?>
+                                                Next
                                             </a>
                                         </div>
                                     </div>
@@ -494,8 +500,14 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
-                <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+
+
+
+                 <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header bg-light p-3">
@@ -544,9 +556,9 @@
                                         <label for="phone-field" class="form-label"><?= $lang["t-Phone"] ?></label>
                                         <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Phone"] ?>" required />
                                     </div>
-                                    
+
                                     <div class="mb-3">
-                                    <label for="tipoemp-field" class="form-label">Tipo</label>
+                                        <label for="tipoemp-field" class="form-label">Tipo</label>
                                         <select class="form-select mb-3" id="tipoemp-field" aria-label="Default select example">
                                             <option disabled selected>Open this select menu</option>
                                             <option value="1">Administrador</option>
@@ -578,39 +590,48 @@
                             </form>
                         </div>
                     </div>
-                </div>
-                <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close"></button>
+            </div>
+            <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mt-2 text-center">
+                                <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
+                                <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                                    <h4>Are you Sure ?</h4>
+                                    <p class="text-muted mx-4 mb-0">Are you Sure You want to Remove this Record ?</p>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <div class="mt-2 text-center">
-                                    <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
-                                    <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-                                        <h4>Are you Sure ?</h4>
-                                        <p class="text-muted mx-4 mb-0">Are you Sure You want to Remove this Record ?</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
-                                    <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn w-sm btn-danger " id="delete-record">Yes, Delete It!</button>
-                                </div>
+                            <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                                <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn w-sm btn-danger " id="delete-record">Yes, Delete It!</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
-        <?php include 'layouts/footer.php'; ?>
     </div>
+    <?php include 'layouts/footer.php'; ?>
 </div>
+</div>
+
+
+<?php include 'layouts/customizer.php'; ?>
+
 <?php include 'layouts/vendor-scripts.php'; ?>
 <script src="assets/libs/prismjs/prism.js"></script>
 <script src="assets/libs/list.js/list.min.js"></script>
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
+
+
 <script src="assets/js/pages/listjs.init.js"></script>
+
+
 <script src="assets/js/app.js"></script>
 </body>
 

@@ -2,7 +2,6 @@
     <div class="layout-width">
         <div class="navbar-header">
             <div class="d-flex">
-                <!-- LOGO -->
                 <div class="navbar-brand-box horizontal-logo">
                     <a href="index.php" class="logo logo-dark">
                         <span class="logo-sm">
@@ -30,8 +29,6 @@
                         <span></span>
                     </span>
                 </button>
-
-                <!-- App Search-->
                 <form class="app-search d-none d-md-block">
                     <div class="position-relative">
                         <input type="text" class="d-none form-control" placeholder="Search..." autocomplete="off"
@@ -78,14 +75,14 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
 
-                        <!-- item-->
+                        
                         <a href="?lang=en" class="dropdown-item notify-item language py-2" data-lang="en"
                             title="English">
                             <img src="assets/images/flags/us.svg" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">English</span>
                         </a>
 
-                        <!-- item-->
+                        
                         <a href="?lang=sp" class="dropdown-item notify-item language py-2 language" data-lang="sp"
                             title="Spanish">
                             <img src="assets/images/flags/spain.svg" alt="user-image" class="me-2 rounded" height="18">
@@ -107,10 +104,7 @@
                                 <div class="col">
                                     <h6 class="m-0 fw-semibold fs-15">Más aplicaciones </h6>
                                 </div>
-                                <!-- <div class="col-auto">
-                                    <a href="#!" class="btn btn-sm btn-soft-info shadow-none"> View All Apps
-                                        <i class="ri-arrow-right-s-line align-middle"></i></a>
-                                </div> -->
+                                
                             </div>
                         </div>
 
@@ -190,7 +184,6 @@
                         </span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
-                        <!-- item-->
                         <h6 class="dropdown-header">Opciones</h6>
                         <a class="dropdown-item" href="perfil.php"><i
                                 class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span

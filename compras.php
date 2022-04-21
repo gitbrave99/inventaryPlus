@@ -29,7 +29,6 @@
                                     <li class="breadcrumb-item active"><?= $lang["t-Buy"] ?></li>
                                 </ol>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -75,25 +74,34 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0"><?= $lang["t-ListBuys"] ?></h4>
                             </div>
+
                             <div class="card-body">
                                 <div id="customerList">
+
+
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
-                                            <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
-                                                <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
-                                            </button>
+
+                                            <div>
+                                                <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
+                                                    <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                    <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                    <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
@@ -425,31 +433,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- POSIBLES GRAFICAS -->
-                <!-- <div class="row">
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title mb-0">Top Proveedores</h4>
-                            </div>
-                            <div class="card-body">
-                                <div id="simple_pie_chart" data-colors='["--vz-primary", "--vz-success", "--vz-warning", "--vz-danger", "--vz-info"]' class="apex-charts" dir="ltr"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title mb-0">Top productos</h4>
-                            </div>
-                            <div class="card-body">
-                                <div id="barChartTopProductos" data-colors='["--vz-success"]' class="apex-charts" dir="ltr"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+                </div>
 
 
 
@@ -459,7 +444,7 @@
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header bg-light p-3">
-                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                <h5 class="modal-title" id="exampleModalLabel ">Añadir compra</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
                             </div>
                             <form>
@@ -553,20 +538,25 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <?php include 'layouts/footer.php'; ?>
     </div>
 </div>
+
+
+<?php include 'layouts/customizer.php'; ?>
+
 <?php include 'layouts/vendor-scripts.php'; ?>
 <script src="assets/libs/prismjs/prism.js"></script>
 <script src="assets/libs/list.js/list.min.js"></script>
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
-<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-<script src="assets/js/pages/apexcharts-pie.init.js"></script>
+
+
 <script src="assets/js/pages/listjs.init.js"></script>
 
-<script src="assets/js/pages/charts-own.js"></script>
+
 <script src="assets/js/app.js"></script>
 </body>
 
