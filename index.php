@@ -210,6 +210,7 @@
                                 </div>
                             </div> 
 
+                            <!-- POSIBLES GRAFICAS  -->
                             <!-- <div class="row">
                                 <div class="col-xl-8">
                                     <div class="card">
@@ -524,17 +525,11 @@
 <!-- <?php include 'layouts/customizer.php'; ?> -->
 
 <?php include 'layouts/vendor-scripts.php'; ?>
-
 <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
 <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
 <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
-
 <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
 <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
-
-
 <script src="assets/js/app.js"></script>
 </body>
 

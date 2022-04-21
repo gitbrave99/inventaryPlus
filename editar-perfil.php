@@ -11,8 +11,6 @@
     </head>
 
     <?php include 'layouts/body.php'; ?>
-
-        <!-- Begin page -->
         <div id="layout-wrapper">
 
             <?php include 'layouts/menu.php'; ?>
@@ -29,7 +27,7 @@
                                         <div class="p-0 ms-auto rounded-circle profile-photo-edit">  
                                             <input id="profile-foreground-img-file-input" type="file" class="profile-foreground-img-file-input" >  
                                             <label for="profile-foreground-img-file-input" class="profile-photo-edit btn btn-light">  
-                                                    <i class="ri-image-edit-line align-bottom me-1"></i> Change Cover
+                                                    <i class="ri-image-edit-line align-bottom me-1"></i> Cambiar fondo
                                             </label>  
                                         </div>  
                                     </div>  
@@ -57,10 +55,8 @@
                                             <p class="text-muted mb-0">Lead Designer / Developer</p>
                                         </div>
                                     </div>
-                                </div><!--end card-->
-                                 
-                                 
-                            </div><!--end col-->
+                                </div>
+                            </div>
                             <div class="col-xxl-9">
                                 <div class="card mt-xxl-n5">
                                     <div class="card-header">
@@ -90,31 +86,31 @@
                                                                 <label for="firstnameInput" class="form-label">First Name</label>
                                                                 <input type="text" class="form-control" id="firstnameInput" placeholder="Enter your firstname" value="Dave">
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                         <div class="col-lg-6">
                                                             <div class="mb-3">
                                                                 <label for="lastnameInput" class="form-label">Last Name</label>
                                                                 <input type="text" class="form-control" id="lastnameInput" placeholder="Enter your lastname" value="Adame">
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                         <div class="col-lg-6">
                                                             <div class="mb-3">
                                                                 <label for="phonenumberInput" class="form-label">Phone Number</label>
                                                                 <input type="text" class="form-control" id="phonenumberInput" placeholder="Enter your phone number" value="+(1) 987 6543">
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                         <div class="col-lg-6">
                                                             <div class="mb-3">
                                                                 <label for="emailInput" class="form-label">Email Address</label>
                                                                 <input type="email" class="form-control" id="emailInput" placeholder="Enter your email" value="daveadame@velzon.com">
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                         <div class="col-lg-12">
                                                             <div class="mb-3">
                                                                 <label for="JoiningdatInput" class="form-label">Joining Date</label>
                                                                 <input type="text" class="form-control" data-provider="flatpickr" id="JoiningdatInput" data-date-format="d M, Y" placeholder="Select date" />
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                         
                                                         
                                                         <div class="col-lg-4">
@@ -122,17 +118,17 @@
                                                                 <label for="cityInput" class="form-label">City</label>
                                                                 <input type="text" class="form-control" id="cityInput" placeholder="City" value="California" />
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                          
                                                         <div class="col-lg-12">
                                                             <div class="hstack gap-2 justify-content-end">
                                                                 <button type="submit" class="btn btn-primary">Updates</button>
                                                                 <button type="button" class="btn btn-soft-success">Cancel</button>
                                                             </div>
-                                                        </div><!--end col-->
-                                                    </div><!--end row-->
+                                                        </div>
+                                                    </div>
                                                 </form>
-                                            </div><!--end tab-pane-->
+                                            </div>
                                             <div class="tab-pane" id="changePassword" role="tabpanel">
                                                 <form action="javascript:void(0);">
                                                     <div class="row g-2">
@@ -141,63 +137,48 @@
                                                                 <label for="oldpasswordInput" class="form-label">Old Password*</label>
                                                                 <input type="password" class="form-control" id="oldpasswordInput" placeholder="Enter current password">
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                         <div class="col-lg-4">
                                                             <div>
                                                                 <label for="newpasswordInput" class="form-label">New Password*</label>
                                                                 <input type="password" class="form-control" id="newpasswordInput" placeholder="Enter new password">
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                         <div class="col-lg-4">
                                                             <div>
                                                                 <label for="confirmpasswordInput" class="form-label">Confirm Password*</label>
                                                                 <input type="password" class="form-control" id="confirmpasswordInput" placeholder="Confirm password">
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                         <div class="col-lg-12">
                                                             <div class="mb-3">
                                                                 <a href="javascript:void(0);" class="link-primary text-decoration-underline">Forgot Password ?</a>
                                                             </div>
-                                                        </div><!--end col-->
+                                                        </div>
                                                         <div class="col-lg-12">
                                                             <div class="text-end">
                                                                 <button type="submit" class="btn btn-success">Change Password</button>
                                                             </div>
-                                                        </div><!--end col-->
-                                                    </div><!--end row-->
+                                                        </div>
+                                                    </div>
                                                 </form> 
-                                                 
-                                                 
-                                            </div><!--end tab-pane-->
-                                            
-                                            
+                                            </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--end col-->
-                        </div><!--end row-->
+                            </div>
+                        </div>
 
                     </div>
-                    <!-- container-fluid -->
-                </div><!-- End Page-content -->
-
+                </div>
                 <?php include 'layouts/footer.php'; ?>
             </div>
-            <!-- end main content-->
-
         </div>
-        <!-- END layout-wrapper -->
-
-        
-
         
 
         <?php include 'layouts/vendor-scripts.php'; ?>
-
-        <!-- profile-setting init js -->
         <script src="assets/js/pages/profile-setting.init.js"></script>
-
-        <!-- App js -->
         <script src="assets/js/app.js"></script>
     </body>
 

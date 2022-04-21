@@ -33,7 +33,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- end page title -->
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="card">
@@ -49,13 +48,12 @@
                                         <h4 class=" mb-0">$<span class="counter-value" data-target="2390.68">0</span></h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end">
-                                        <!-- <span class="badge badge-soft-success"><i class="ri-arrow-up-s-fill align-middle me-1"></i>6.24 %<span> -->
                                         </span></span>
                                     </div>
                                 </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="card">
                             <div class="card-body">
@@ -70,21 +68,19 @@
                                         <h4 class=" mb-0"><span class="counter-value" data-target="10">0</span></h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end">
-                                        <!-- <span class="badge badge-soft-success"><i class="ri-arrow-up-s-fill align-middle me-1"></i>3.67 %<span> -->
                                         </span></span>
                                     </div>
                                 </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0"><?= $lang["t-ListBuys"] ?></h4>
-                            </div><!-- end card header -->
-
+                            </div>
                             <div class="card-body">
                                 <div id="customerList">
                                     <div class="row g-4 mb-3">
@@ -426,10 +422,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- end card -->
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- POSIBLES GRAFICAS -->
                 <!-- <div class="row">
                     <div class="col-xl-6">
                         <div class="card">
@@ -533,7 +531,6 @@
                     </div>
                 </div>
 
-                <!-- Modal -->
                 <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -556,43 +553,20 @@
                         </div>
                     </div>
                 </div>
-                <!--end modal -->
-
             </div>
-            <!-- container-fluid -->
         </div>
-        <!-- End Page-content -->
-
         <?php include 'layouts/footer.php'; ?>
     </div>
-    <!-- end main content-->
-
 </div>
-<!-- END layout-wrapper -->
-
-
-<!-- CUSTOMIZER THEME  -->
-<!-- <?php include 'layouts/customizer.php'; ?> -->
-
 <?php include 'layouts/vendor-scripts.php'; ?>
-<!-- prismjs plugin -->
 <script src="assets/libs/prismjs/prism.js"></script>
 <script src="assets/libs/list.js/list.min.js"></script>
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
-
-<!-- apexcharts -->
 <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-<!-- piecharts init -->
 <script src="assets/js/pages/apexcharts-pie.init.js"></script>
-<!-- listjs init -->
 <script src="assets/js/pages/listjs.init.js"></script>
 
-<!-- charts owns  -->
 <script src="assets/js/pages/charts-own.js"></script>
-
-
-<!-- App js -->
 <script src="assets/js/app.js"></script>
 </body>
 

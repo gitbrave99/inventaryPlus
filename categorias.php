@@ -33,15 +33,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- end page title -->
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0"><?= $lang["t-ListOfCategory"] ?></h4>
-                            </div><!-- end card header -->
-
+                            </div>
                             <div class="card-body">
                                 <div id="customerList">
                                     <div class="row g-4 mb-3">
@@ -332,18 +329,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- end card -->
+                            </div>
                         </div>
-                        <!-- end col -->
                     </div>
-                    <!-- end col -->
                 </div>
-                <!-- end row -->
-
-
-
-
-
                 <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -387,7 +376,6 @@
                                     <div class="hstack gap-2 justify-content-end">
                                         <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
                                         <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddBuy'] ?></button>
-                                        <!-- <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button> -->
                                         
                                     </div>
                                 </div>
@@ -396,7 +384,6 @@
                     </div>
                 </div>
 
-                <!-- Modal -->
                 <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">

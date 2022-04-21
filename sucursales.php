@@ -12,7 +12,6 @@
 
 <?php include 'layouts/body.php'; ?>
 
-<!-- Begin page -->
 <div id="layout-wrapper">
 
     <?php include 'layouts/menu.php'; ?>
@@ -20,8 +19,6 @@
 
         <div class="page-content">
             <div class="container-fluid">
-
-                <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -32,19 +29,15 @@
                                     <li class="breadcrumb-item active"><?= $lang["t-NameBranch"] ?></li>
                                 </ol>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <!-- end page title -->
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0"><?= $lang["t-BranchList"] ?></h4>
-                            </div><!-- end card header -->
-
+                            </div>
                             <div class="card-body">
                                 <div id="customerList">
                                     <div class="row g-4 mb-3">
@@ -58,7 +51,6 @@
                                                 <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
                                                     <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
                                                 </button>
-                                            
                                         </div>
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
@@ -142,17 +134,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- end card -->
+                            </div>
                         </div>
-                        <!-- end col -->
                     </div>
-                    <!-- end col -->
                 </div>
-                <!-- end row -->
-
-
-
-
 
                 <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
@@ -221,8 +206,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Modal -->
                 <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -245,34 +228,16 @@
                         </div>
                     </div>
                 </div>
-                <!--end modal -->
-
             </div>
-            <!-- container-fluid -->
         </div>
-        <!-- End Page-content -->
-
         <?php include 'layouts/footer.php'; ?>
     </div>
-    <!-- end main content-->
-
 </div>
-<!-- END layout-wrapper -->
-
-
-<!-- CUSTOMIZER THEME  -->
-<!-- <?php include 'layouts/customizer.php'; ?> -->
-
 <?php include 'layouts/vendor-scripts.php'; ?>
-<!-- prismjs plugin -->
 <script src="assets/libs/prismjs/prism.js"></script>
 <script src="assets/libs/list.js/list.min.js"></script>
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
-
-<!-- listjs init -->
 <script src="assets/js/pages/listjs.init.js"></script>
-
-<!-- App js -->
 <script src="assets/js/app.js"></script>
 </body>
 

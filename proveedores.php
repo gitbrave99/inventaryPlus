@@ -12,7 +12,6 @@
 
 <?php include 'layouts/body.php'; ?>
 
-<!-- Begin page -->
 <div id="layout-wrapper">
 
     <?php include 'layouts/menu.php'; ?>
@@ -20,8 +19,6 @@
 
         <div class="page-content">
             <div class="container-fluid">
-
-                <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -36,30 +33,27 @@
                         </div>
                     </div>
                 </div>
-                <!-- end page title -->
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0"><?= $lang["t-ListOfSuppliers"] ?></h4>
-                            </div><!-- end card header -->
-
+                            </div>
                             <div class="card-body">
                                 <div id="customerList">
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
-                                            
-                                                <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
-                                                    <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                    <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                    <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
-                                                </button>
-                                            
+
+                                            <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
+                                                <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
+                                            </button>
+
                                         </div>
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
@@ -73,52 +67,52 @@
 
                                     <div class="table-responsive table-card mt-3 mb-1">
                                         <table class="table align-middle table-nowrap" id="customerTable">
-                                        <thead class="table-light">
-                                                                        <tr>
-                                                                            <th scope="col" style="width: 50px;">
-                                                                                <div class="hstack flex-wrap gap-2">
-                                                                                    <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
-                                                                                </div>
-                                                                            </th>
-                                                                            <th class="sort" data-sort="proveedor_name"><?= $lang["t-proveedor"] ?></th>
-                                                                            <th class="sort" data-sort="email"><?= $lang["t-Direction"] ?></th>
-                                                                            <th class="sort" data-sort="phone"><?= $lang["t-Phone"] ?></th>
-                                                                            <th class="sort" data-sort="Country"><?= $lang["t-Country"] ?></th>
-                                                                            <th class="sort" data-sort="email"><?= $lang["t-Email"] ?></th>
-                                                                            <th class="sort" data-sort="Url">Url</th>
-                                                                            <th class="sort" data-sort="Status"><?= $lang["t-Status"] ?></th>
-                                                                            <th class="sort" data-sort="action"><?= $lang["t-Action"] ?></th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody class="list form-check-all">
-                                                                        <tr>
-                                                                            <th scope="row">
-                                                                                <div class="form-check">
-                                                                                    <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
-                                                                                </div>
-                                                                            </th>
-                                                                            <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                                                            <td class="proveedor_name">Yamaha</td>
-                                                                            <td class="email">Pasadena California 865 st</td>
-                                                                            <td class="phone">580-464-4694</td>
-                                                                            <td class="phone">LA California</td>
-                                                                            <td class="phone">Yamaha@velzon.com</td>
-                                                                            <td class="Url"><a href="https://www.yamaha.com/">https://www.yamaha.com/</a></td>
-                                                                            <td class="Status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
-                                                                            <td>
-                                                                                <div class="d-flex gap-2">
-                                                                                    <div class="edit">
-                                                                                        <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
-                                                                                    </div>
-                                                                                    <div class="remove">
-                                                                                        <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 50px;">
+                                                        <div class="hstack flex-wrap gap-2">
+                                                            <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
+                                                        </div>
+                                                    </th>
+                                                    <th class="sort" data-sort="proveedor_name"><?= $lang["t-proveedor"] ?></th>
+                                                    <th class="sort" data-sort="email"><?= $lang["t-Direction"] ?></th>
+                                                    <th class="sort" data-sort="phone"><?= $lang["t-Phone"] ?></th>
+                                                    <th class="sort" data-sort="Country"><?= $lang["t-Country"] ?></th>
+                                                    <th class="sort" data-sort="email"><?= $lang["t-Email"] ?></th>
+                                                    <th class="sort" data-sort="Url">Url</th>
+                                                    <th class="sort" data-sort="Status"><?= $lang["t-Status"] ?></th>
+                                                    <th class="sort" data-sort="action"><?= $lang["t-Action"] ?></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="proveedor_name">Yamaha</td>
+                                                    <td class="email">Pasadena California 865 st</td>
+                                                    <td class="phone">580-464-4694</td>
+                                                    <td class="phone">LA California</td>
+                                                    <td class="phone">Yamaha@velzon.com</td>
+                                                    <td class="Url"><a href="https://www.yamaha.com/">https://www.yamaha.com/</a></td>
+                                                    <td class="Status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
+                                                    <td>
+                                                        <div class="d-flex gap-2">
+                                                            <div class="edit">
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
+                                                            </div>
+                                                            <div class="remove">
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
 
-                                                                    </tbody>
+                                            </tbody>
                                         </table>
                                         <div class="noresult" style="display: none">
                                             <div class="text-center">
@@ -134,27 +128,19 @@
                                     <div class="d-flex justify-content-end">
                                         <div class="pagination-wrap hstack gap-2">
                                             <a class="page-item pagination-prev disabled" href="#">
-                                            <?= $lang["t-Previous"] ?>
+                                                <?= $lang["t-Previous"] ?>
                                             </a>
                                             <ul class="pagination listjs-pagination mb-0"></ul>
                                             <a class="page-item pagination-next" href="#">
-                                            <?= $lang["t-Next"] ?>
+                                                <?= $lang["t-Next"] ?>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- end card -->
+                            </div>
                         </div>
-                        <!-- end col -->
                     </div>
-                    <!-- end col -->
                 </div>
-                <!-- end row -->
-
-
-
-
-
                 <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -188,19 +174,19 @@
                                     <div class="mb-3">
                                         <label for="date-field" class="form-label"><?= $lang["t-Country"] ?></label>
                                         <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Country"] ?>" required />
-                                        
+
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="date-field" class="form-label"><?= $lang["t-Email"] ?></label>
                                         <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Email"] ?>" required />
-                                        
+
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="date-field" class="form-label">Url</label>
                                         <input type="text" id="date-field" class="form-control" placeholder="Url" required />
-                                        
+
                                     </div>
 
                                     <div>
@@ -223,8 +209,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Modal -->
                 <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -247,34 +231,16 @@
                         </div>
                     </div>
                 </div>
-                <!--end modal -->
-
             </div>
-            <!-- container-fluid -->
         </div>
-        <!-- End Page-content -->
-
         <?php include 'layouts/footer.php'; ?>
     </div>
-    <!-- end main content-->
-
 </div>
-<!-- END layout-wrapper -->
-
-
-<!-- CUSTOMIZER THEME  -->
-<!-- <?php include 'layouts/customizer.php'; ?> -->
-
 <?php include 'layouts/vendor-scripts.php'; ?>
-<!-- prismjs plugin -->
 <script src="assets/libs/prismjs/prism.js"></script>
 <script src="assets/libs/list.js/list.min.js"></script>
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
-
-<!-- listjs init -->
 <script src="assets/js/pages/listjs.init.js"></script>
-
-<!-- App js -->
 <script src="assets/js/app.js"></script>
 </body>
 

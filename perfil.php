@@ -5,8 +5,6 @@
         
         <title>Mi perfil</title>
         <?php include 'layouts/title-meta.php'; ?>
-
-        <!-- swiper css -->
         <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
 
         <?php include 'layouts/head-css.php'; ?>
@@ -39,7 +37,6 @@
                                         <h3 class="text-white mb-1">Balmore Alejanro</h3>
                                         <p class="text-white-75">Gerente</p>
                                         <div class="hstack text-white-50 gap-1">
-                                            <!-- <div class="me-2"><i class="ri-map-pin-user-line me-1 text-white-75 fs-16 align-middle"></i>California, United States</div> -->
                                             <div><i class="ri-building-line me-1 text-white-75 fs-16 align-middle"></i>Nombre sucursal</div>
                                         </div>
                                     </div>
@@ -103,7 +100,6 @@
                                             </div>
                                         </div>
                                          
-                                        
                                         <div class="tab-pane fade" id="documents" role="tabpanel">
                                             <div class="card">
                                                 <div class="card-body">
@@ -316,34 +312,19 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div><!--end tab-pane-->
-                                    </div><!--end tab-content-->
+                                        </div> 
+                                    </div> 
                                 </div>
-                            </div><!--end col-->
-                        </div><!--end row-->
-
-                    </div><!-- container-fluid -->
-                </div><!-- End Page-content -->
-
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <?php include 'layouts/footer.php'; ?>
-            </div><!-- end main content-->
-
+            </div> 
         </div>
-        <!-- END layout-wrapper -->
-
-        
-
-        
-
         <?php include 'layouts/vendor-scripts.php'; ?>
-
-        <!-- swiper js -->
         <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
-        <!-- profile init js -->
         <script src="assets/js/pages/profile.init.js"></script>
-        
-        <!-- App js -->
         <script src="assets/js/app.js"></script>
     </body>
 
