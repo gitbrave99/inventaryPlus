@@ -12,19 +12,13 @@
 
 <?php include 'layouts/body.php'; ?>
 
-<!-- Begin page -->
 <div id="layout-wrapper">
 
     <?php include 'layouts/menu.php'; ?>
-
-    <!-- ============================================================== -->
-    <!-- Start right Content here -->
-    <!-- ============================================================== -->
     <div class="main-content">
 
         <div class="page-content">
             <div class="container-fluid">
-                <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -72,7 +66,7 @@
                                         </span>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1"><?= $lang["t-Buy"]?>s</p>
+                                        <p class="text-uppercase fw-semibold fs-12 text-muted mb-1"><?= $lang["t-Buy"] ?>s</p>
                                         <h4 class=" mb-0"><span class="counter-value" data-target="10">0</span></h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end">
@@ -117,7 +111,7 @@
 
                                     <div class="table-responsive table-card mt-3 mb-1">
                                         <table class="table align-middle table-nowrap" id="customerTable">
-                                        <thead class="table-light">
+                                            <thead class="table-light">
                                                 <tr>
                                                     <th scope="col" style="width: 50px;">
                                                         <div class="hstack flex-wrap gap-2">
@@ -434,38 +428,30 @@
                                 </div>
                             </div><!-- end card -->
                         </div>
-                        <!-- end col -->
                     </div>
-                    <!-- end col -->
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-xl-6">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0">Top Proveedores</h4>
-                            </div><!-- end card header -->
-
+                            </div>
                             <div class="card-body">
                                 <div id="simple_pie_chart" data-colors='["--vz-primary", "--vz-success", "--vz-warning", "--vz-danger", "--vz-info"]' class="apex-charts" dir="ltr"></div>
-                            </div><!-- end card-body -->
-                        </div><!-- end card -->
+                            </div>
+                        </div>
                     </div>
-                    <!-- end col -->
-
                     <div class="col-xl-6">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0">Top productos</h4>
-                            </div><!-- end card header -->
-
+                            </div>
                             <div class="card-body">
                                 <div id="barChartTopProductos" data-colors='["--vz-success"]' class="apex-charts" dir="ltr"></div>
-                            </div><!-- end card-body -->
-                        </div><!-- end card -->
+                            </div>
+                        </div>
                     </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
+                </div> -->
 
 
 
@@ -537,7 +523,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <div class="hstack gap-2 justify-content-end">
-                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
                                         <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddBuy'] ?></button>
                                         <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button>
                                     </div>

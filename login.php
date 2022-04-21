@@ -101,7 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include 'layouts/body.php'; ?>
 
         <div class="auth-page-wrapper pt-5">
-            <!-- auth page bg -->
             <div class="auth-one-bg-position auth-one-bg"  id="auth-particles">
                 <div class="bg-overlay"></div>
                 
@@ -111,8 +110,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </svg>
                 </div>
             </div>
-
-            <!-- auth page content -->
             <div class="auth-page-content">
                 <div class="container">
                     <div class="row">
@@ -188,7 +185,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <!-- end card -->
 
                             <div class="mt-4 text-center">
-                                <p class="mb-0"><a href="auth-signup-basic.php" class="fw-semibold text-primary text-decoration-underline">Unirse ahora</a> </p>
+                                <p class="mb-0"><a href="#" class="fw-semibold text-primary text-decoration-underline">Unirse ahora</a> </p>
                             </div>
 
                         </div>

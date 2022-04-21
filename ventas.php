@@ -16,15 +16,10 @@
 <div id="layout-wrapper">
 
     <?php include 'layouts/menu.php'; ?>
-
-    <!-- ============================================================== -->
-    <!-- Start right Content here -->
-    <!-- ============================================================== -->
     <div class="main-content">
 
         <div class="page-content">
             <div class="container-fluid">
-                <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -39,7 +34,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- end page title -->
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="card">
@@ -349,34 +343,29 @@
                     </div>
                     <!-- end col -->
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-xl-6">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0">Top Ventas</h4>
-                            </div><!-- end card header -->
+                            </div>
 
                             <div class="card-body">
                                 <div id="simple_pie_chart" data-colors='["--vz-primary", "--vz-success", "--vz-warning", "--vz-danger", "--vz-info"]' class="apex-charts" dir="ltr"></div>
-                            </div><!-- end card-body -->
-                        </div><!-- end card -->
+                            </div>
+                        </div>
                     </div>
-                    <!-- end col -->
-
                     <div class="col-xl-6">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0">Top productos</h4>
-                            </div><!-- end card header -->
-
+                            </div>
                             <div class="card-body">
                                 <div id="barChartTopProductos" data-colors='["--vz-success"]' class="apex-charts" dir="ltr"></div>
-                            </div><!-- end card-body -->
-                        </div><!-- end card -->
+                            </div>
+                        </div>
                     </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
+                </div> -->
 
 
 

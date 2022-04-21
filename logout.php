@@ -10,7 +10,6 @@
     <?php include 'layouts/body.php'; ?>
 
         <div class="auth-page-wrapper pt-5">
-            <!-- auth page bg -->
             <div class="auth-one-bg-position auth-one-bg"  id="auth-particles">
                 <div class="bg-overlay"></div>
                 
@@ -20,24 +19,19 @@
                     </svg>
                 </div>
             </div>
-
-            <!-- auth page content -->
             <div class="auth-page-content">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="text-center mt-sm-5 mb-4 text-white-50">
                                 <div>
-                                    <!-- <a href="index.php" class="d-inline-block auth-logo">
-                                        <img src="assets/images/logo-light.png" alt="" height="20">
-                                    </a> -->
+                                    <a href="index.php" class="d-inline-block auth-logo">
+                                        <img src="assets/images/logocompany.png" alt="" height="65">
+                                    </a>
                                 </div>
-                                <p class="mt-3 fs-15 fw-medium">InventPlus</p>
                             </div>
                         </div>
                     </div>
-                    <!-- end row -->
-
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 col-xl-5">
                             <div class="card mt-4">
@@ -57,20 +51,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
-
                         </div>
-                        <!-- end col -->
                     </div>
-                    <!-- end row -->
                 </div>
-                <!-- end container -->
             </div>
-            <!-- end auth page content -->
-
-            <!-- footer -->
             <footer class="footer">
                 <div class="container">
                     <div class="row">
@@ -84,11 +69,7 @@
             </footer>
         </div>
         <?php include 'layouts/vendor-scripts.php'; ?>
-
-        <!-- particles js -->
         <script src="assets/libs/particles.js/particles.js"></script>
-
-        <!-- particles app js -->
         <script src="assets/js/pages/particles.app.js"></script>
     </body>
 

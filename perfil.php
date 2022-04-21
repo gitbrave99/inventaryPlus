@@ -15,14 +15,9 @@
 
     <?php include 'layouts/body.php'; ?>
 
-        <!-- Begin page -->
         <div id="layout-wrapper">
 
             <?php include 'layouts/menu.php'; ?>
-
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
             <div class="main-content">
 
                 <div class="page-content">
@@ -38,7 +33,7 @@
                                     <div class="avatar-lg">
                                         <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-thumbnail rounded-circle" />
                                     </div>
-                                </div><!--end col-->
+                                </div>
                                 <div class="col">
                                     <div class="p-2">
                                         <h3 class="text-white mb-1">Balmore Alejanro</h3>
@@ -50,45 +45,25 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="col-12 col-lg-auto order-last order-lg-0">
-                                    <div class="row text text-white-50 text-center">
-                                        <div class="col-lg-6 col-4">
-                                            <div class="p-2">
-                                                <h4 class="text-white mb-1">24.3K</h4>
-                                                <p class="fs-14 mb-0">Followers</p>
-                                            </div>
-                                        </div> 
-                                        <div class="col-lg-6 col-4">
-                                            <div class="p-2">
-                                                <h4 class="text-white mb-1">1.3K</h4>
-                                                <p class="fs-14 mb-0">Following</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 
-                            </div><!--end row-->
+                            </div>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-12">
                                 <div>
                                     <div class="d-flex">
-                                        <!-- Nav tabs -->
                                         <ul class="nav nav-pills animation-nav profile-nav gap-2 gap-lg-3 flex-grow-1" role="tablist">
                                             <li class="nav-item">
                                                 <a class="nav-link fs-14 active" data-bs-toggle="tab" href="#overview-tab" role="tab">
                                                     <i class="ri-airplay-fill d-inline-block d-md-none"></i> <span class="d-none d-md-inline-block">Informacion</span>
                                                 </a>
                                             </li>
-                                           
-                                            
                                         </ul>
                                         <div class="flex-shrink-0">
                                             <a href="editar-perfil.php" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Edit Profile</a>
                                         </div>
                                     </div>
-                                    <!-- Tab panes -->
                                     <div class="tab-content pt-4 text-muted">
                                         <div class="tab-pane active" id="overview-tab" role="tabpanel">
                                             <div class="row">
@@ -124,11 +99,8 @@
                                                             </div>
                                                         </div>
                                                       </div>
-
-                                                 
-                                                     
-                                                </div><!--end col--> 
-                                            </div><!--end row-->
+                                                </div>
+                                            </div>
                                         </div>
                                          
                                         

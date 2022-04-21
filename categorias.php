@@ -5,7 +5,6 @@
 
     <title><?= $lang['t-categoria'] ?></title>
     <?php include 'layouts/title-meta.php'; ?>
-    <!-- Sweet Alert css-->
     <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 
     <?php include 'layouts/head-css.php'; ?>
@@ -13,21 +12,13 @@
 </head>
 
 <?php include 'layouts/body.php'; ?>
-
-<!-- Begin page -->
 <div id="layout-wrapper">
 
     <?php include 'layouts/menu.php'; ?>
-
-    <!-- ============================================================== -->
-    <!-- Start right Content here -->
-    <!-- ============================================================== -->
     <div class="main-content">
 
         <div class="page-content">
             <div class="container-fluid">
-
-                <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -396,9 +387,8 @@
                                     <div class="hstack gap-2 justify-content-end">
                                         <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
                                         <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddBuy'] ?></button>
-                                        <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button>
-                                        <button type="button" class="btn btn-primary btn-sm" id="sa-success">Click me</button>
-                                        <button type="button" class="btn btn-primary btn-sm" id="sa-error">Sweet alert wrong</button>
+                                        <!-- <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button> -->
+                                        
                                     </div>
                                 </div>
                             </form>
@@ -429,26 +419,14 @@
                         </div>
                     </div>
                 </div>
-                <!--end modal -->
-
             </div>
-            <!-- container-fluid -->
         </div>
-        <!-- End Page-content -->
-
         <?php include 'layouts/footer.php'; ?>
     </div>
-    <!-- end main content-->
-
 </div>
-<!-- END layout-wrapper -->
-
-
-<!--start back-to-top-->
 <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
     <i class="ri-arrow-up-line"></i>
 </button>
-<!--end back-to-top-->
 <script>
     var mybutton = document.getElementById("back-to-top");
 
@@ -463,25 +441,17 @@
         100 < document.body.scrollTop || 100 < document.documentElement.scrollTop ? mybutton.style.display = "block" : mybutton.style.display = "none"
     }
 </script>
-
-<!-- CUSTOMIZER THEME  -->
-
-
+ 
 <?php include 'layouts/vendor-scripts.php'; ?>
-<!-- prismjs plugin -->
 <script src="assets/libs/prismjs/prism.js"></script>
 <script src="assets/libs/list.js/list.min.js"></script>
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
 
-<!-- Sweet Alerts js -->
 <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
 
-<!-- Sweet alert init js-->
 <script src="assets/js/pages/sweetalerts.init.js"></script>
-<!-- listjs init -->
 <script src="assets/js/pages/listjs.init.js"></script>
 
-<!-- App js -->
 <script src="assets/js/app.js"></script>
 </body>
 
