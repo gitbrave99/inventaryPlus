@@ -56,7 +56,7 @@ $lang["t-NameCategory"] = "Categoria";
 $lang["t-Country"] = "Ciudad";
 $lang["t-Direction"] = "Dirección";
 $lang["t-AddSuppliers"] = "Añadir Proveedor";
-
+$lang["t-NameSuppliers"] = "Proveedor";
     
 //Compras
 $lang["t-Invoice"] = "Factura";

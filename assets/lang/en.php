@@ -56,7 +56,7 @@
     $lang["t-Direction"] = "Direction";
     $lang["t-AddSuppliers"] = "Add Suppliers";
     $lang["t-AddCompany"] = "Add Company";
-
+    $lang["t-NameSuppliers"] = "Supplier";
 
 
     //Compras

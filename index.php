@@ -67,7 +67,7 @@
                                         <div class="card-body">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-sucursal'] ?></p>
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-NameBranch'] ?></p>
                                                 </div>
                                                 <div class="flex-shrink-0">
                                                     <h5 class="text-success fs-14 mb-0">
@@ -79,7 +79,7 @@
                                                     <h4 class="fs-22 fw-semibold ff-secondary mb-4">
                                                         <span class="counter-value" data-target="1">0</span>
                                                     </h4>
-                                                    <a href="sucursales.php" class="text-decoration-underline"><?= $lang['t-vertodos'] ?></a>
+                                                    <a href="sucursales.php" class="text-decoration-underline"><?= $lang['t-ViewAllApps'] ?></a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <span class="avatar-title bg-info text-white rounded fs-2 shadow">
@@ -99,7 +99,7 @@
                                         <div class="card-body">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-proveedor'] ?></p>
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-NameSuppliers'] ?></p>
                                                 </div>
                                                 <div class="flex-shrink-0">
                                                     <h5 class="text-danger fs-14 mb-0">
@@ -112,7 +112,7 @@
                                                     <h4 class="fs-22 fw-semibold ff-secondary mb-4">
                                                         <span class="counter-value" data-target="12">0</span>
                                                     </h4>
-                                                    <a href="proveedores.php" class="text-decoration-underline"><?= $lang['t-vertodos'] ?></a>
+                                                    <a href="proveedores.php" class="text-decoration-underline"><?= $lang['t-ViewAllApps'] ?></a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <span class="avatar-title bg-warning rounded fs-3">
@@ -129,7 +129,7 @@
                                         <div class="card-body">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-producto'] ?></p>
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-products'] ?></p>
                                                 </div>
                                                 <div class="flex-shrink-0">
                                                     <h5 class="text-success fs-14 mb-0">
@@ -142,7 +142,7 @@
                                                     <h4 class="fs-22 fw-semibold ff-secondary mb-4">
                                                         <span class="counter-value" data-target="20">0</span>
                                                     </h4>
-                                                    <a href="productos.php" class="text-decoration-underline"><?= $lang['t-vertodos'] ?></a>
+                                                    <a href="productos.php" class="text-decoration-underline"><?= $lang['t-ViewAllApps'] ?></a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <span class="avatar-title bg-danger text-white rounded fs-2 shadow">
@@ -159,7 +159,7 @@
                                         <div class="card-body">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-compras'] ?></p>
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-Buy'] ?></p>
                                                 </div>
                                             </div>
                                             <div class="d-flex align-items-end justify-content-between mt-4">
@@ -167,7 +167,7 @@
                                                     <h4 class="fs-22 fw-semibold ff-secondary mb-4">
                                                         <span class="counter-value" data-target="10">0</span>
                                                     </h4>
-                                                    <a href="compras.php" class="text-decoration-underline"><?= $lang['t-vertodos'] ?></a>
+                                                    <a href="compras.php" class="text-decoration-underline"><?= $lang['t-ViewAllApps'] ?></a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <span class="avatar-title bg-success rounded fs-3">
@@ -183,7 +183,7 @@
                                         <div class="card-body">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-ventas'] ?></p>
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0"><?= $lang['t-Sale'] ?></p>
                                                 </div>
                                                 <div class="flex-shrink-0">
                                                     <h5 class="text-success fs-14 mb-0">
@@ -195,7 +195,7 @@
                                                     <h4 class="fs-22 fw-semibold ff-secondary mb-4">
                                                         <span class="counter-value" data-target="20">0</span>
                                                     </h4>
-                                                    <a href="ventas.php" class="text-decoration-underline"><?= $lang['t-vertodos'] ?></a>
+                                                    <a href="ventas.php" class="text-decoration-underline"><?= $lang['t-ViewAllApps'] ?></a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <span class="avatar-title bg-danger text-white rounded fs-2 shadow">
