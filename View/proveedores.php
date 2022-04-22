@@ -12,13 +12,20 @@
 
 <?php include 'layouts/body.php'; ?>
 
+<!-- Begin page -->
 <div id="layout-wrapper">
 
     <?php include 'layouts/menu.php'; ?>
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
     <div class="main-content">
 
         <div class="page-content">
             <div class="container-fluid">
+
+                <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -33,38 +40,37 @@
                         </div>
                     </div>
                 </div>
+                <!-- end page title -->
 
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0"><?= $lang["t-ListOfSuppliers"] ?></h4>
-                            </div>
+                            </div><!-- end card header -->
+
                             <div class="card-body">
                                 <div id="customerList">
-
-
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
+                                            <!-- Borrar -->
+                                            <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
+                                                <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
+                                            </button>
+                                            <!-- Agregar -->
+                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#createModal">
+                                                <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
+                                            </button>
+                                            <!-- Imprimir -->
+                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="print-btn" data-bs-target="">
+                                                <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
+                                            </button>
 
-                                            <div>
-                                                <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
-                                                    <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
-                                                </button>
-
-                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                    <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
-                                                </button>
-
-                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                    <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
-                                                </button>
-                                            </div>
                                         </div>
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
                                                 <div class="search-box ms-2">
-                                                    <input type="text" class="form-control search" placeholder="<?= $lang["t-search"] ?>">
+                                                    <input type="text" class="form-control search" placeholder="Search...">
                                                     <i class="ri-search-line search-icon"></i>
                                                 </div>
                                             </div>
@@ -91,7 +97,11 @@
                                                 </tr>
                                             </thead>
                                             <tbody class="list form-check-all">
-                                                <tr>
+
+                                            <?php
+                                                include_once '../Controller/Supplier/readSupplier.php';
+                                            ?>
+                                                <!-- <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
@@ -108,14 +118,14 @@
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#editModal"><?= $lang["t-Edit"] ?></button>
                                                             </div>
                                                             <div class="remove">
                                                                 <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
                                                             </div>
                                                         </div>
                                                     </td>
-                                                </tr>
+                                                </tr> -->
 
 
                                             </tbody>
@@ -134,93 +144,30 @@
                                     <div class="d-flex justify-content-end">
                                         <div class="pagination-wrap hstack gap-2">
                                             <a class="page-item pagination-prev disabled" href="#">
-                                                Previous
+                                                <?= $lang["t-Previous"] ?>
                                             </a>
                                             <ul class="pagination listjs-pagination mb-0"></ul>
                                             <a class="page-item pagination-next" href="#">
-                                                Next
+                                                <?= $lang["t-Next"] ?>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div><!-- end card -->
                         </div>
+                        <!-- end col -->
                     </div>
-
+                    <!-- end col -->
                 </div>
+                <!-- Aqui se incluyen los modals -->
 
+                <?php
+                    include_once 'public/proveedores-create-modal.html';
+                    include_once 'public/proveedores-edit-modal.html';
+                ?>
+                
 
-
-
-
-                <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header bg-light p-3">
-                                <h5 class="modal-title" id="exampleModal Labe">Añadir Proveedor</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
-                            </div>
-                            <form>
-                                <div class="modal-body">
-
-                                    <div class="mb-3" id="modal-id" style="display: none;">
-                                        <label for="id-field" class="form-label">ID</label>
-                                        <input type="text" id="id-field" class="form-control" placeholder="ID" readonly />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="customername-field" class="form-label"><?= $lang["t-proveedor"] ?></label>
-                                        <input type="text" id="customername-field" class="form-control" placeholder="<?= $lang["t-proveedor"] ?>" required />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="email-field" class="form-label"><?= $lang["t-Email"] ?></label>
-                                        <input type="email" id="email-field" class="form-control" placeholder="<?= $lang["t-Direction"] ?>" required />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="phone-field" class="form-label"><?= $lang["t-Phone"] ?></label>
-                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Phone"] ?>" required />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="date-field" class="form-label"><?= $lang["t-Country"] ?></label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Country"] ?>" required />
-
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="date-field" class="form-label"><?= $lang["t-Email"] ?></label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Email"] ?>" required />
-
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="date-field" class="form-label">Url</label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="Url" required />
-
-                                    </div>
-
-                                    <div>
-                                        <label for="status-field" class="form-label">Status</label>
-                                        <select class="form-control" data-trigger name="status-field" id="status-field">
-                                            <option value="">Status</option>
-                                            <option value="Active">Active</option>
-                                            <option value="Block">Block</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <div class="hstack gap-2 justify-content-end">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang["t-CloseCategory"] ?></button>
-                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang["t-AddSuppliers"] ?></button>
-                                        <button type="button" class="btn btn-success" id="edit-btn"><?= $lang["t-UpdateCategory"] ?></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <!-- Modal -->
                 <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -243,25 +190,34 @@
                         </div>
                     </div>
                 </div>
+                <!--end modal -->
 
             </div>
+            <!-- container-fluid -->
         </div>
+        <!-- End Page-content -->
+
         <?php include 'layouts/footer.php'; ?>
     </div>
+    <!-- end main content-->
+
 </div>
+<!-- END layout-wrapper -->
 
 
-<?php include 'layouts/customizer.php'; ?>
+<!-- CUSTOMIZER THEME  -->
+<!-- <?php include 'layouts/customizer.php'; ?> -->
 
 <?php include 'layouts/vendor-scripts.php'; ?>
+<!-- prismjs plugin -->
 <script src="assets/libs/prismjs/prism.js"></script>
 <script src="assets/libs/list.js/list.min.js"></script>
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
 
-
+<!-- listjs init -->
 <script src="assets/js/pages/listjs.init.js"></script>
 
-
+<!-- App js -->
 <script src="assets/js/app.js"></script>
 </body>
 

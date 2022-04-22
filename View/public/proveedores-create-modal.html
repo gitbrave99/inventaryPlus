@@ -1,0 +1,68 @@
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-light p-3">
+                <h5 class="modal-title" id="exampleModalLabel"><?= $lang["AddSupplierModal"] ?></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+            </div>
+            <form action="../../Controller/Supplier/createSupplier.php" method="post">
+                <div class="modal-body">
+
+                    <div class="mb-3" id="modal-id" style="display: none;">
+                        <label for="id-field" class="form-label">ID</label>
+                        <input type="text" id="id-field" class="form-control" placeholder="ID" readonly />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="customername-field" class="form-label"><?= $lang["t-proveedor"] ?></label>
+                        <input type="text" id="customername-field" class="form-control" name="supplier" placeholder="<?= $lang["t-proveedor"] ?>" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email-field" class="form-label"><?= $lang["t-Direction"] ?></label>
+                        <input type="direction" id="email-field" class="form-control" name="direction" placeholder="<?= $lang["t-Direction"] ?>" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone-field" class="form-label"><?= $lang["t-Phone"] ?></label>
+                        <input type="text" id="phone-field" class="form-control" name="phone" placeholder="<?= $lang["t-Phone"] ?>" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="date-field" class="form-label"><?= $lang["t-Country"] ?></label>
+                        <input type="text" id="date-field" class="form-control" name="country" placeholder="<?= $lang["t-Country"] ?>" required />
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="date-field" class="form-label"><?= $lang["t-Email"] ?></label>
+                        <input type="text" id="date-field" class="form-control" name="email" placeholder="<?= $lang["t-Email"] ?>" required />
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="date-field" class="form-label">Url</label>
+                        <input type="text" id="date-field" class="form-control" name="url" placeholder="Url" required />
+
+                    </div>
+
+                    <div>
+                        <label for="status-field" class="form-label">Status</label>
+                        <select class="form-control" data-trigger name="status" id="status-field">
+                            <!-- <option value="">Status</option> -->
+                            <option value="1">Active</option>
+                            <option value="0">Block</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang["t-CloseCategory"] ?></button>
+                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang["t-AddSuppliers"] ?></button>
+                        <!-- <button type="button" class="btn btn-success" id="edit-btn"><?= $lang["t-UpdateCategory"] ?></button> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

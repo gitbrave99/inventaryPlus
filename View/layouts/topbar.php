@@ -2,6 +2,7 @@
     <div class="layout-width">
         <div class="navbar-header">
             <div class="d-flex">
+                <!-- LOGO -->
                 <div class="navbar-brand-box horizontal-logo">
                     <a href="index.php" class="logo logo-dark">
                         <span class="logo-sm">
@@ -29,6 +30,8 @@
                         <span></span>
                     </span>
                 </button>
+
+                <!-- App Search-->
                 <form class="app-search d-none d-md-block">
                     <div class="position-relative">
                         <input type="text" class="d-none form-control" placeholder="Search..." autocomplete="off"
@@ -46,7 +49,7 @@
 
             <div class="d-flex align-items-center">
 
-                <div class="dropdown d-md-none topbar-head-dropdown header-item">
+            <div class="dropdown d-md-none topbar-head-dropdown header-item">
                     <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle shadow-none"
                         id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -75,18 +78,18 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
 
-                        
+                        <!-- item-->
                         <a href="?lang=en" class="dropdown-item notify-item language py-2" data-lang="en"
                             title="English">
                             <img src="assets/images/flags/us.svg" alt="user-image" class="me-2 rounded" height="18">
                             <span class="align-middle">English</span>
                         </a>
 
-                        
+                        <!-- item-->
                         <a href="?lang=sp" class="dropdown-item notify-item language py-2 language" data-lang="sp"
                             title="Spanish">
                             <img src="assets/images/flags/spain.svg" alt="user-image" class="me-2 rounded" height="18">
-                            <span class="align-middle">Española</span>
+                            <span class="align-middle">Español</span>
                         </a>
 
                          
@@ -104,7 +107,10 @@
                                 <div class="col">
                                     <h6 class="m-0 fw-semibold fs-15">Más aplicaciones </h6>
                                 </div>
-                                
+                                <!-- <div class="col-auto">
+                                    <a href="#!" class="btn btn-sm btn-soft-info shadow-none"> View All Apps
+                                        <i class="ri-arrow-right-s-line align-middle"></i></a>
+                                </div> -->
                             </div>
                         </div>
 
@@ -175,7 +181,7 @@
                     <button type="button" class="btn  shadow-none" id="page-header-user-dropdown" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <span class="d-flex align-items-center">
-                            <img class="rounded-circle header-profile-user" src="assets/images/perfilblanco.jpg"
+                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
                                 alt="Header Avatar">
                             <span class="text-start ms-xl-2">
                                 <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Balmore Landaverde</span>
@@ -184,11 +190,32 @@
                         </span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
                         <h6 class="dropdown-header">Opciones</h6>
                         <a class="dropdown-item" href="perfil.php"><i
                                 class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle">Profile</span></a>
-                         
+                        <!-- <a class="dropdown-item" href="apps-chat.php"><i
+                                class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i> <span
+                                class="align-middle">Messages</span></a>
+                        <a class="dropdown-item" href="apps-tasks-kanban.php"><i
+                                class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i> <span
+                                class="align-middle">Taskboard</span></a>
+                        <a class="dropdown-item" href="pages-faqs.php"><i
+                                class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span
+                                class="align-middle">Help</span></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="pages-profile.php"><i
+                                class="mdi mdi-wallet text-muted fs-16 align-middle me-1"></i> <span
+                                class="align-middle">Balance : <b>$5971.67</b></span></a> -->
+                        <!-- <a class="dropdown-item" href="pages-profile-settings.php"><span
+                                class="badge bg-soft-success text-success mt-1 float-end">New</span><i
+                                class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
+                                class="align-middle">Settings</span></a> -->
+                        <!-- <a class="dropdown-item" href="auth-lockscreen-basic.php"><i
+                                class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i>
+                                 <span class="align-middle">Lock screen</span>
+                        </a> -->
                         <a class="dropdown-item" href="logout.php"><i
                                 class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle" ><?=$lang['t-logout']?></span>
