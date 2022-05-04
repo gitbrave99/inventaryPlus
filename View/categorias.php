@@ -37,27 +37,24 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                        <div class="card-header">
+                            <div class="card-header">
                                 <h4 class="card-title mb-0"><?= $lang["t-ListOfCategory"] ?></h4>
                             </div>
 
                             <div class="card-body">
-                                <div id="customerList">
-
-
+                                <div id="categoryTableList">
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
-
                                             <div>
                                                 <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
                                                     <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
                                                 </button>
 
-                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModalEditAddCategoria">
                                                     <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
                                                 </button>
 
-                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModalEditAddCategoria">
                                                     <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
                                                 </button>
                                             </div>
@@ -65,7 +62,7 @@
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
                                                 <div class="search-box ms-2">
-                                                    <input type="text" class="form-control search" placeholder="<?= $lang["t-search"] ?>">
+                                                    <input type="text" class="form-control search" placeholder="Search...">
                                                     <i class="ri-search-line search-icon"></i>
                                                 </div>
                                             </div>
@@ -81,11 +78,11 @@
                                                             <input class="form-check-input" type="checkbox" id="checkAll" value="option">
                                                         </div>
                                                     </th>
-                                                    <th class="sort" data-sort="categoria"><?= $lang["t-NameCategory"] ?></th>
-                                                    <th class="sort" data-sort="descripcion"><?= $lang["t-Description"] ?></th>
-                                                    <th class="sort" data-sort="imagen"><?= $lang["t-Image"] ?></th>
-                                                    <th class="sort" data-sort="status"><?= $lang["t-Status"] ?></th>
-                                                    <th class="sort" data-sort="action"><?= $lang["t-Action"] ?></th>
+                                                    <th class="sort" data-sort="category_name">Categoria</th>
+                                                    <th class="sort" data-sort="descripcion">Descipción</th>
+                                                    <th class="sort" data-sort="imagen">Imagen</th>
+                                                    <th class="sort" data-sort="status">Estado</th>
+                                                    <th class="sort" data-sort="action">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody class="list form-check-all">
@@ -95,18 +92,70 @@
                                                             <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2102</a></td>
-                                                    <td class="categoria">Viento</td>
-                                                    <td class="descripcion">Instrumentos</td>
-                                                    <td class="imagen">Image.png</td>
-                                                    <td class="status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="category_name">Mary Cousar</td>
+                                                    <td class="descripcion">marycousar@velzon.com</td>
+                                                    <td>
+                                                        <img class="imagen" src="./assets/images/bg-auth.jpg" alt="" width="10px" height="10px">
+                                                    </td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAddCategoria">Edit</button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option9">
+                                                        </div>
+                                                    </th>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2109</a></td>
+                                                    <td class="category_name">Herbert Stokes</td>
+                                                    <td class="descripcion">herbertstokes@velzon.com</td>
+                                                    <td>
+                                                        <img class="imagen" src="./assets/images/bg-auth.jpg" alt="" width="10px" height="10px">
+                                                    </td>
+                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td>
+                                                        <div class="d-flex gap-2">
+                                                            <div class="edit">
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAddCategoria">Edit</button>
+                                                            </div>
+                                                            <div class="remove">
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option11">
+                                                        </div>
+                                                    </th>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2111</a></td>
+                                                    <td class="category_name">Johnny Evans</td>
+                                                    <td class="descripcion">johnnyevans@velzon.com</td>
+                                                    <td>
+                                                        <img class="imagen" src="./assets/images/bg-auth.jpg" alt="" width="10px" height="10px">
+                                                    </td>
+                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td>
+                                                        <div class="d-flex gap-2">
+                                                            <div class="edit">
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAddCategoria">Edit</button>
+                                                            </div>
+                                                            <div class="remove">
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -114,26 +163,27 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option12">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                                    <td class="categoria">Metal</td>
-                                                    <td class="descripcion">Musical dac</td>
-                                                    <td class="imagen">Image.png</td>
-                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">block</span></td>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2112</a></td>
+                                                    <td class="category_name">Kevin Dawson</td>
+                                                    <td class="descripcion">kevindawson@velzon.com</td>
+                                                    <td>
+                                                        <img class="imagen" src="./assets/images/bg-auth.jpg" alt="" width="10px" height="10px">
+                                                    </td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAddCategoria">Edit</button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
-
                                             </tbody>
                                         </table>
                                         <div class="noresult" style="display: none">
@@ -162,18 +212,15 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
-                
 
-                 
-
-                <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="showModalEditAddCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header bg-light p-3">
-                                <h5 class="modal-title" id="exampleModlLabel"><?= $lang['t-AddCategory'] ?></h5>
+                                <h5 class="modal-title" id="titleModalEditAdd"></h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
                             </div>
                             <form>
@@ -185,22 +232,24 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="customername-field" class="form-label"><?= $lang["t-NameCategory"] ?></label>
-                                        <input type="text" id="customername-field" class="form-control" placeholder="<?= $lang["t-NameCategory"] ?>" required />
+                                        <label for="categoryname-field" class="form-label">Nombre</label>
+                                        <input type="text" id="categoryname-field" class="form-control" placeholder="Enter Name" required />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="email-field" class="form-label"><?= $lang["t-Description"] ?></label>
-                                        <input type="email" id="email-field" class="form-control" placeholder="<?= $lang["t-Description"] ?>" required />
+                                        <label for="descripcion-field" class="form-label">Descripción</label>
+                                        <input type="text" id="descripcion-field" class="form-control" placeholder="Enter description" required />
                                     </div>
-
+                                    <div class="mb-3" id="boxPreviewImage">
+                                        <img src="" id="previewEditImgCategory" alt="preview Edit category" width="200" height="150px" style="display: none;">
+                                    </div>
                                     <div class="mb-3">
-                                        <label for="phone-field" class="form-label"><?= $lang["t-Image"] ?></label>
-                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Image"] ?>" required />
+                                        <label for="imagen-field" class="form-label">Imagen</label>
+                                        <input type="file" id="imagen-field" class="form-control" value="" required />
                                     </div>
 
                                     <div>
-                                        <label for="status-field" class="form-label"><?= $lang["t-Status"] ?></label>
+                                        <label for="status-field" class="form-label">Status</label>
                                         <select class="form-control" data-trigger name="status-field" id="status-field">
                                             <option value="">Status</option>
                                             <option value="Active">Active</option>
@@ -210,16 +259,20 @@
                                 </div>
                                 <div class="modal-footer">
                                     <div class="hstack gap-2 justify-content-end">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
-                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddBuy'] ?></button>
-
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
+                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                
+
+
+
+
+
                 <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -258,7 +311,7 @@
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
 
 
-<script src="assets/js/pages/listjs.init.js"></script>
+<script src="assets/js/pages/category-list-table.js"></script>
 
 
 <script src="assets/js/app.js"></script>

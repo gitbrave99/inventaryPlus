@@ -50,7 +50,7 @@
                             </div><!-- end card header -->
 
                             <div class="card-body">
-                                <div id="customerList">
+                                <div id="supplierTableList">
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
                                             <!-- Borrar -->
@@ -58,11 +58,11 @@
                                                 <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
                                             </button>
                                             <!-- Agregar -->
-                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#createModal">
+                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModalEditAddSupplier">
                                                 <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
                                             </button>
                                             <!-- Imprimir -->
-                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="print-btn" data-bs-target="">
+                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="print-btn" data-bs-target="#showModalEditAddSupplier">
                                                 <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
                                             </button>
 
@@ -86,47 +86,74 @@
                                                             <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
                                                         </div>
                                                     </th>
-                                                    <th class="sort" data-sort="proveedor_name"><?= $lang["t-proveedor"] ?></th>
-                                                    <th class="sort" data-sort="email"><?= $lang["t-Direction"] ?></th>
-                                                    <th class="sort" data-sort="phone"><?= $lang["t-Phone"] ?></th>
-                                                    <th class="sort" data-sort="Country"><?= $lang["t-Country"] ?></th>
-                                                    <th class="sort" data-sort="email"><?= $lang["t-Email"] ?></th>
-                                                    <th class="sort" data-sort="Url">Url</th>
-                                                    <th class="sort" data-sort="Status"><?= $lang["t-Status"] ?></th>
-                                                    <th class="sort" data-sort="action"><?= $lang["t-Action"] ?></th>
+                                                    <th class="sort" data-sort="supplier_name">Proveedor</th>
+                                                    <th class="sort" data-sort="direccion">Dirección</th>
+                                                    <th class="sort" data-sort="telefono">Teléfono</th>
+                                                    <th class="sort" data-sort="ciudad">Ciudad</th>
+                                                    <th class="sort" data-sort="email">Email</th>
+                                                    <th class="sort" data-sort="url">Url</th>
+                                                    <th class="sort" data-sort="status">Estado</th>
+                                                    <th class="sort" data-sort="action">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody class="list form-check-all">
 
-                                            <?php
-                                                include_once '../Controller/Supplier/readSupplier.php';
-                                            ?>
-                                                <!-- <tr>
+                                                <?php
+                                                // include_once '../Controller/Supplier/readSupplier.php';
+                                                ?>
+                                                <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
                                                     <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="email">Pasadena California 865 st</td>
-                                                    <td class="phone">580-464-4694</td>
-                                                    <td class="phone">LA California</td>
-                                                    <td class="phone">Yamaha@velzon.com</td>
-                                                    <td class="Url"><a href="https://www.yamaha.com/">https://www.yamaha.com/</a></td>
-                                                    <td class="Status"><span class="badge badge-soft-success text-uppercase"><?= $lang["t-Active"] ?></span></td>
+                                                    <td class="supplier_name">Mary Cousar</td>
+                                                    <td class="direccion">Santa Ana</td>
+                                                    <td class="telefono">7845-9854</td>
+                                                    <td class="ciudad">Santa Ana</td>
+                                                    <td class="email">marycousar@gmail.com</td>
+                                                    <td class="url">Url</td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#editModal"><?= $lang["t-Edit"] ?></button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAddSupplier">Edit</button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
                                                             </div>
                                                         </div>
                                                     </td>
-                                                </tr> -->
+                                                </tr>
 
+
+
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2103</a></td>
+                                                    <td class="supplier_name">Susana</td>
+                                                    <td class="direccion">avenida fray felipe</td>
+                                                    <td class="telefono">1111-9854</td>
+                                                    <td class="ciudad">Chalchuapa</td>
+                                                    <td class="email">tecana@gmail.com</td>
+                                                    <td class="url">Url</td>
+                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                    <td>
+                                                        <div class="d-flex gap-2">
+                                                            <div class="edit">
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAddSupplier">Edit</button>
+                                                            </div>
+                                                            <div class="remove">
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
                                             </tbody>
                                         </table>
@@ -161,13 +188,71 @@
                 </div>
                 <!-- Aqui se incluyen los modals -->
 
-                <?php
-                    include_once 'public/proveedores-create-modal.html';
-                    include_once 'public/proveedores-edit-modal.html';
-                ?>
-                
+                 
 
-                <!-- Modal -->
+
+                <div class="modal fade" id="showModalEditAddSupplier" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-light p-3">
+                                <h5 class="modal-title" id="titleModalEditAdd"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                            </div>
+                            <form>
+                                <div class="modal-body">
+
+                                    <div class="mb-3" id="modal-id" style="display: none;">
+                                        <label for="id-field" class="form-label">ID</label>
+                                        <input type="text" id="id-field" class="form-control" placeholder="ID" readonly />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="suppliername-field" class="form-label">Nombre</label>
+                                        <input type="text" id="suppliername-field" class="form-control" placeholder="Enter Name" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="direccion-field" class="form-label">Descripción</label>
+                                        <input type="text" id="direccion-field" class="form-control" placeholder="Enter description" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefono-field" class="form-label">Teléfono</label>
+                                        <input type="text" id="telefono-field" class="form-control" placeholder="78459885" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ciudad-field" class="form-label">Ciudad</label>
+                                        <input type="text" id="ciudad-field" class="form-control" placeholder="Santa Ana" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email-field" class="form-label">Email</label>
+                                        <input type="text" id="email-field" class="form-control" placeholder="jaunperez@gmail.com" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="url-field" class="form-label">Url</label>
+                                        <input type="text" id="url-field" class="form-control" placeholder="www.vevobox.com" required />
+                                    </div>
+                                    <div>
+                                        <label for="status-field" class="form-label">Status</label>
+                                        <select class="form-control" data-trigger name="status-field" id="status-field">
+                                            <option value="">Status</option>
+                                            <option value="Active">Active</option>
+                                            <option value="Block">Block</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="hstack gap-2 justify-content-end">
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
+                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal ELIMINAR -->
                 <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -215,7 +300,7 @@
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
 
 <!-- listjs init -->
-<script src="assets/js/pages/listjs.init.js"></script>
+<script src="assets/js/pages/proveedores-list-table.js"></script>
 
 <!-- App js -->
 <script src="assets/js/app.js"></script>
