@@ -83,30 +83,28 @@
                             </div>
 
                             <div class="card-body">
-                                <div id="customerList">
-
-
+                                <div id="compraTableList">
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
 
                                             <div>
-                                                <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
+                                                <button type="button" class="btn btndel" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
                                                     <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
                                                 </button>
 
-                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModalEditAddcompra">
                                                     <i class=" ri-file-add-fill align-center" style="font-size: 16px;"></i>
                                                 </button>
-
-                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
+                                                <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModalEditAddcompra">
                                                     <i class=" ri-printer-line align-center" style="font-size: 16px"></i>
+
                                                 </button>
                                             </div>
                                         </div>
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
                                                 <div class="search-box ms-2">
-                                                    <input type="text" class="form-control search" placeholder="<?= $lang["t-search"] ?>">
+                                                    <input type="text" class="form-control search" placeholder="Search...">
                                                     <i class="ri-search-line search-icon"></i>
                                                 </div>
                                             </div>
@@ -114,50 +112,50 @@
                                     </div>
 
                                     <div class="table-responsive table-card mt-3 mb-1">
-                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                        <table class="table align-middle table-nowrap" id="compraTable">
                                             <thead class="table-light">
                                                 <tr>
                                                     <th scope="col" style="width: 50px;">
-                                                        <div class="hstack flex-wrap gap-2">
-                                                            <input class="form-check-input" type="checkbox" id="checkAll" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccionar todas" value="option">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="checkAll" value="option">
                                                         </div>
                                                     </th>
-                                                    <th class="sort" data-sort="proveedor_name"><?= $lang["t-proveedor"] ?></th>
-                                                    <th class="sort" data-sort="customer_name"><?= $lang["t-Customer"] ?></th>
-                                                    <th class="sort" data-sort="Image"><?= $lang["t-Image"] ?></th>
-                                                    <th class="sort" data-sort="Factura"><?= $lang["t-Invoice"] ?></th>
-                                                    <th class="sort" data-sort="Date"><?= $lang["t-Date"] ?></th>
-                                                    <th class="sort" data-sort="Sub"><?= $lang["t-Sub"] ?></th>
-                                                    <th class="sort" data-sort="IVA">IVA</th>
-                                                    <th class="sort" data-sort="Total">Total</th>
-                                                    <th class="sort" data-sort="action"><?= $lang["t-Action"] ?></th>
+                                                    <th class="sort" data-sort="nofactura">No. Factura</th>
+                                                    <th class="sort" data-sort="fecha">Fecha</th>
+                                                    <th class="sort" data-sort="subtotal">Sub Total</th>
+                                                    <th class="sort" data-sort="iva">IVA</th>
+                                                    <th class="sort" data-sort="total">total</th>
+                                                    <th class="sort" data-sort="vedetalle">Ver detalle</th>
+                                                    <th class="sort" data-sort="status">Estatus</th>
+                                                    <th class="sort" data-sort="action">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody class="list form-check-all">
-
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">kevin</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">01</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="nofactura">12</td>
+                                                    <td class="fecha">12/07/12</td>
+                                                    <td class="subtotal">12</td>
+                                                    <td class="iva">3%</td>
+                                                    <td class="total">14</td>
+                                                    <td class="verdetalle">
+                                                        <button type="button" class="btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showmodalDetalleCompra">
+                                                            <i class="mdi mdi-eye-arrow-right mdi-24px badge-soft-secondary"></i>
+                                                        </button>
+                                                    </td>
+                                                    <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAddcompra">Edit</button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -165,242 +163,28 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
+                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                         </div>
                                                     </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">Melvin Orellana</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">02</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
-                                                            </div>
-                                                        </div>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2104</a></td>
+                                                    <td class="nofactura">13</td>
+                                                    <td class="fecha">9/07/12</td>
+                                                    <td class="subtotal">2</td>
+                                                    <td class="iva">3%</td>
+                                                    <td class="total">3</td>
+                                                    <td class="verdetalle">
+                                                        <button type="button" class="btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showmodalDetalleCompra">
+                                                            <i class="mdi mdi-eye-arrow-right mdi-24px badge-soft-secondary"></i>
+                                                        </button>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">Mauricio Pleitez</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">03</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-
+                                                    <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
+                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAddcompra">Edit</button>
                                                             </div>
                                                             <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">David Hernandez</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">04</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">Balmore Landaverde</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">05</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">Roberto Moreno</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">06</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">Diego Moreno</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">07</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">Gorge Preza</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">08</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option5">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2105</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">Laura Maria</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">09</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="checkAll" value="option12">
-                                                        </div>
-                                                    </th>
-                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2112</a></td>
-                                                    <td class="proveedor_name">Yamaha</td>
-                                                    <td class="customer_name">Sindy Monrroy</td>
-                                                    <td class="Image">Image.PNG</td>
-                                                    <td class="Factura">010</td>
-                                                    <td class="Date">14 Apr, 2021</td>
-                                                    <td class="Sub">$50</td>
-                                                    <td class="IVA">10%</td>
-                                                    <td class="Total">$55</td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="edit">
-                                                                <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><?= $lang["t-Edit"] ?></button>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><?= $lang["t-Remove"] ?></button>
+                                                                <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -412,8 +196,10 @@
                                                 <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px">
                                                 </lord-icon>
                                                 <h5 class="mt-2">Sorry! No Result Found</h5>
-                                                <p class="text-muted mb-0">We've searched more than 150+ Orders We did not find any
-                                                    orders for you search.</p>
+                                                <p class="text-muted mb-0">
+                                                    We've searched more than 150+ Orders We did not find any
+                                                    orders for you search
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -439,12 +225,12 @@
 
 
 
-
-                <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- MODAL MODIFICAR AGREGAR COMPRA  -->
+                <div class="modal fade" id="showModalEditAddcompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header bg-light p-3">
-                                <h5 class="modal-title" id="exampleModalLabel ">Añadir compra</h5>
+                                <h5 class="modal-title" id="titleModalEditAdd"></h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
                             </div>
                             <form>
@@ -454,49 +240,25 @@
                                         <label for="id-field" class="form-label">ID</label>
                                         <input type="text" id="id-field" class="form-control" placeholder="ID" readonly />
                                     </div>
-
                                     <div class="mb-3">
-                                        <label for="customername-field" class="form-label"><?= $lang["t-proveedor"] ?></label>
-                                        <input type="text" id="customername-field" class="form-control" placeholder="<?= $lang["t-proveedor"] ?>" required />
+                                        <label for="fecha-field" class="form-label">Fecha</label>
+                                        <input type="date" id="fecha-field" class="form-control" placeholder="Select Date" required />
                                     </div>
-
                                     <div class="mb-3">
-                                        <label for="email-field" class="form-label"><?= $lang["t-Customer"] ?></label>
-                                        <input type="email" id="email-field" class="form-control" placeholder="<?= $lang["t-Customer"] ?>" required />
+                                        <label for="iva-field" class="form-label">IVA</label>
+                                        <input type="text" id="iva-field" class="form-control" placeholder="Enter description" required />
                                     </div>
-
                                     <div class="mb-3">
-                                        <label for="phone-field" class="form-label"><?= $lang["t-Image"] ?></label>
-                                        <input type="text" id="phone-field" class="form-control" placeholder="<?= $lang["t-Image"] ?>" required />
+                                        <label for="subtotal-field" class="form-label">subtotal</label>
+                                        <input type="text" id="subtotal-field" class="form-control" placeholder="78459885" required />
                                     </div>
-
                                     <div class="mb-3">
-                                        <label for="date-field" class="form-label"><?= $lang["t-Invoice"] ?></label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Invoice"] ?>" required />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="date-field" class="form-label"><?= $lang["t-Date"] ?></label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Date"] ?>" required />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="date-field" class="form-label"><?= $lang["t-Sub"] ?></label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="<?= $lang["t-Sub"] ?>" required />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="date-field" class="form-label">IVA</label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="IVA" required />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="date-field" class="form-label">Total</label>
-                                        <input type="text" id="date-field" class="form-control" placeholder="Total" required />
+                                        <label for="total-field" class="form-label">Total</label>
+                                        <input type="text" id="total-field" class="form-control" placeholder="Santa Ana" required />
                                     </div>
 
                                     <div>
-                                        <label for="status-field" class="form-label"><?= $lang["t-Status"] ?></label>
+                                        <label for="status-field" class="form-label">Status</label>
                                         <select class="form-control" data-trigger name="status-field" id="status-field">
                                             <option value="">Status</option>
                                             <option value="Active">Active</option>
@@ -506,15 +268,210 @@
                                 </div>
                                 <div class="modal-footer">
                                     <div class="hstack gap-2 justify-content-end">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><?= $lang['t-CloseCategory'] ?></button>
-                                        <button type="submit" class="btn btn-success" id="add-btn"><?= $lang['t-AddBuy'] ?></button>
-                                        <button type="button" class="btn btn-success" id="edit-btn"><?= $lang['t-UpdateCategory'] ?></button>
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
+                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
+
+
+                <!-- MODAL EDITAR DETALLE COMPRA EXTRA  -->
+                <div class="modal fade" id="showModalEditAdddetalleCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-light p-3">
+                                <h5 class="modal-title" id="titleModalEditAdd"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                            </div>
+                            <form>
+                                <div class="modal-body">
+
+                                    <div class="mb-3" id="modal-id" style="display: none;">
+                                        <label for="dtcid-field" class="form-label">ID</label>
+                                        <input type="text" id="dtcid-field" class="form-control" placeholder="ID" readonly />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="dtproductname-field" class="form-label">Producto</label>
+                                        <input type="text" id="dtproductname-field" class="form-control" placeholder="Enter Name" required />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="dtccantidad-field" class="form-label">Cantidad</label>
+                                        <input type="text" id="dtccantidad-field" class="form-control" placeholder="Enter description" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dtcpreciounitario-field" class="form-label">Precio Unitario</label>
+                                        <input type="text" id="dtcpreciounitario-field" class="form-control" placeholder="78459885" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dtcmonto-field" class="form-label">Monto</label>
+                                        <input type="text" id="dtcmonto-field" class="form-control" placeholder="Santa Ana" required />
+                                    </div>
+                                    <div>
+                                        <label for="dtcstatus-field" class="form-label">Status</label>
+                                        <select class="form-control" data-trigger name="dtcstatus-field" id="dtcstatus-field">
+                                            <option value="">Status</option>
+                                            <option value="Active">Active</option>
+                                            <option value="Block">Block</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="hstack gap-2 justify-content-end">
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
+                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- MODAL DETALLE COMPRA  -->
+                <div class="modal fade fadeInLeft" id="showmodalDetalleCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header bg-light p-3">
+                                <h5 class="modal-title" id="titleModaldetalleCompra">Detalle de compra</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                            </div>
+                            <form action="">
+                                <div class="modal-body">
+                                    <div id="detalleCompraTableList">
+                                        <div class="row g-4 mb-3">
+                                            <div class="col-sm-auto">
+                                                <div>
+                                                    <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModalEditAdddetalleCompra"><i class="ri-add-line align-bottom me-1"></i> Add</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm">
+                                                <div class="d-flex justify-content-sm-end">
+                                                    <div class="search-box ms-2">
+                                                        <input type="text" class="form-control search" placeholder="Search...">
+                                                        <i class="ri-search-line search-icon"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-responsive table-card mt-3 mb-1">
+                                            <table class="table align-middle table-nowrap" id="detalleCompraTable">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th scope="col" style="width: 50px;">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="checkAlldtcompra" value="option">
+                                                            </div>
+                                                        </th>
+                                                        <th class="sort" data-sort="dtproductname">Producto</th>
+                                                        <th class="sort" data-sort="dtccantidad">Cantidad</th>
+                                                        <th class="sort" data-sort="dtcpreciounitario">Precio Unitario</th>
+                                                        <th class="sort" data-sort="dtcmonto">Monto</th>
+                                                        <th class="sort" data-sort="status">Estado</th>
+                                                        <th class="sort" data-sort="action">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="list form-check-all-dtcompra">
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="checkAlldtcompra" value="option1">
+                                                            </div>
+                                                        </th>
+                                                        <td class="dtcid" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                        <td class="dtproductname">Violín acústico</td>
+                                                        <td class="dtccantidad">12</td>
+                                                        <td class="dtcpreciounitario">784.5</td>
+                                                        <td class="dtcmonto">800</td>
+                                                        <td class="status"><span class="badge badge-soft-success text-uppercase">Active</span></td>
+                                                        <td>
+                                                            <div class="d-flex gap-2">
+                                                                <div class="edit">
+                                                                    <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAdddetalleCompra">Edit</button>
+                                                                </div>
+                                                                <div class="remove">
+                                                                    <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="checkAlldtcompra" value="option1">
+                                                            </div>
+                                                        </th>
+                                                        <td class="dtcid" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2103</a></td>
+                                                        <td class="dtproductname">Guitarra</td>
+                                                        <td class="dtccantidad">2</td>
+                                                        <td class="dtcpreciounitario">500</td>
+                                                        <td class="dtcmonto">600</td>
+                                                        <td class="status"><span class="badge badge-soft-danger text-uppercase">Block</span></td>
+                                                        <td>
+                                                            <div class="d-flex gap-2">
+                                                                <div class="edit">
+                                                                    <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModalEditAdddetalleCompra">Edit</button>
+                                                                </div>
+                                                                <div class="remove">
+                                                                    <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">Remove</button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                            <div class="noresult" style="display: none">
+                                                <div class="text-center">
+                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px">
+                                                    </lord-icon>
+                                                    <h5 class="mt-2">Sorry! No Result Found</h5>
+                                                    <p class="text-muted mb-0">
+                                                        We've searched more than 150+ Orders We did not find any
+                                                        orders for you search
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-end">
+                                            <div class="pagination-wrap hstack gap-2">
+                                                <a class="page-item pagination-prev disabled" href="#">
+                                                    Previous
+                                                </a>
+                                                <ul class="pagination listjs-pagination mb-0"></ul>
+                                                <a class="page-item pagination-next" href="#">
+                                                    Next
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="hstack gap-2 justify-content-end">
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
+                                        <button type="button" class="btn btn-success" id="edit-btn">Update</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
 
                 <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
@@ -554,7 +511,8 @@
 <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
 
 
-<script src="assets/js/pages/listjs.init.js"></script>
+<script src="assets/js/pages/compra-list-table.js"></script>
+<script src="assets/js/pages/detalleCompra-list-table.js"></script>
 
 
 <script src="assets/js/app.js"></script>

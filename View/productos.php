@@ -45,7 +45,7 @@
                                 <div id="productoTableList">
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
-                                        <div>
+                                            <div>
                                                 <button type="button" class="btn btndel remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal">
                                                     <i class="ri-delete-bin-fill align-center text-white" style="font-size: 16px"></i>
                                                 </button>
@@ -256,7 +256,7 @@
                             </form>
                         </div>
                     </div>
-                </div>  
+                </div>
 
 
 
