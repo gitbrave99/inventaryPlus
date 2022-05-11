@@ -8,6 +8,7 @@ $lang["t-sucursal"] = "Sucursales";
 $lang["t-empleado"] = "Empleados";
 $lang["t-categoria"] = "Categorias";
 
+$lang["t-proveedors"]="Proveedores";
 $lang["t-WebApps"] = "Aplicaciones Web";
 $lang["t-ViewAllApps"] = "Ver Todo";
 $lang["t-Index"] = "Tablero";
@@ -56,7 +57,7 @@ $lang["t-NameCategory"] = "Categoria";
 $lang["t-Country"] = "Ciudad";
 $lang["t-Direction"] = "Dirección";
 $lang["t-AddSuppliers"] = "Añadir Proveedor";
-$lang["t-NameSuppliers"] = "Proveedor";
+
     
 //Compras
 $lang["t-Invoice"] = "Factura";
@@ -264,3 +265,11 @@ $lang["t-level-2.1"] = "Nivel 2.1";
 $lang["t-level-2.2"] = "Nivel 2.2";
 $lang["t-level-3.1"] = "Nivel 3.1";
 $lang["t-level-3.2"] = "Nivel 3.2";
+
+$lang["editSupplierModal"] = "Editar Proveedor";
+$lang["editSuppliers"]="Editar Proveedor";
+$lang["AddSupplierModal"] = "A&ntilde;adir Proveedor";
+
+$lang["t-Question-Delete-Provider"] = "¿ Est&aacutes seguro ?";
+$lang["t-Question-Delete-Provider-Body"] = "¿ Est&aacutes seguro que deseas eliminar este registro ?";
+$lang["deleteSuppliers"] = "Si, Borralo!";

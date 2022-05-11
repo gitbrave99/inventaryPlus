@@ -9,7 +9,7 @@
         (new Supplier())->Add($objSuppliers);
     }
 
-    header('Location: /View/proveedores.php');
+    header('Location: /inventaryPlus/View/proveedores.php');
     // echo 'dfsfs';
 
 ?>

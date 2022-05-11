@@ -9,7 +9,7 @@
     $lang["t-categoria"]="Categorias";
 
 
-
+    $lang["t-proveedors"]="Supplier";
     $lang["t-WebApps"] = "Web Apps";
     $lang["t-ViewAllApps"] = "View All Apps";
     $lang["t-Index"] = "Dashboard";
@@ -52,11 +52,11 @@
 
 
     //Proveedores
-    $lang["t-Country"] = "Country";
+    $lang["t-Country"] = "City";
     $lang["t-Direction"] = "Direction";
     $lang["t-AddSuppliers"] = "Add Suppliers";
     $lang["t-AddCompany"] = "Add Company";
-    $lang["t-NameSuppliers"] = "Supplier";
+
 
 
     //Compras
@@ -275,3 +275,11 @@
     $lang["t-level-2.2"]="Level 2.2";
     $lang["t-level-3.1"]="Level 3.1";
     $lang["t-level-3.2"]="Level 3.2";
+
+    $lang["editSupplierModal"] = "Edit Supplier";
+    $lang["editSuppliers"]="Edit Supplier";
+    $lang["AddSupplierModal"] = "Add Supplier";
+
+    $lang["t-Question-Delete-Provider"] = "Are you Sure ?";
+    $lang["t-Question-Delete-Provider-Body"] = "Are you Sure You want to Remove this Record ?";
+    $lang["deleteSuppliers"] = "Yes, Delete It!";
